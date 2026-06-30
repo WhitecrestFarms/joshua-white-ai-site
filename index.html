@@ -47,16 +47,15 @@
 
     <button class="menu-toggle" aria-label="Open menu" onclick="document.body.classList.toggle('menu-open')">☰</button>
 
-    <nav class="main-nav">
+    <nav class="main-nav refined-nav">
       <a href="#search">Search</a>
       <a href="#value">Home Value</a>
       <a href="#listings">Listings</a>
-      <a href="#mortgage">Mortgage</a>
       <a href="#about">About</a>
       <a href="#reviews">Reviews</a>
-      <a href="#resources">HH Tools</a>
-      <a href="#fair-housing">Fair Housing</a>
+      <a href="#resources">Resources</a>
       <a href="#contact">Contact</a>
+      <a class="nav-cta" href="#ai">Joshua AI</a>
     </nav>
   </header>
 
@@ -94,11 +93,32 @@
       </div>
     </section>
 
-    <section class="quick-actions">
+    <section class="quick-actions premium-actions">
       <a href="#search"><strong>Search Homes</strong><span>Browse active homes with RealScout.</span></a>
       <a href="https://homevalue.howardhanna.com/joshuawilliamwhite" target="_blank" rel="noopener"><strong>Home Value</strong><span>Start with a quick Howard Hanna valuation.</span></a>
       <a href="#mortgage"><strong>Mortgage</strong><span>Connect with 1st Priority Mortgage.</span></a>
       <a href="#contact"><strong>Talk to Joshua</strong><span>Call, text, email, or connect online.</span></a>
+    </section>
+
+    <section id="about" class="section about-section about-featured">
+      <div class="about-photo"><img src="joshua-headshot.png" alt="Joshua White" /></div>
+      <div>
+        <p class="eyebrow">About Joshua</p>
+        <h2>Licensed in both New York and Pennsylvania</h2>
+        <p class="lead-copy">I have over 15 years of experience in customer service and I have enjoyed working with people. I am an active listener and I strive to make my client’s needs, wants, and desires my priority. My goal is to make your experience as smooth as possible.</p>
+        <p>As a local native to the area for over 25 years and with a passion for real estate, I bring local knowledge and a client-first approach to every transaction. I am a proud father of one handsome son, and in my free time I enjoy running and spending time outside.</p>
+        <p>A proud member of Elmira-Corning Board of REALTORS® & Northern Mountains of Pennsylvania MLS, it would be my sincere pleasure to partner with you and manage all the details of your real estate transaction.</p>
+        <div class="mini-cred-grid">
+          <span>NY Licensed</span>
+          <span>PA Licensed</span>
+          <span>15+ Years Customer Service</span>
+          <span>Local Native</span>
+        </div>
+        <div class="cta-row about-cta-row">
+          <a class="btn btn-gold" href="tel:16072076969">Call Joshua</a>
+          <a class="btn btn-light btn-light-bordered" href="mailto:joshuawhite@howardhanna.com">Email Joshua</a>
+        </div>
+      </div>
     </section>
 
     <section id="ai" class="section ai-feature">
@@ -133,7 +153,7 @@
       </div>
     </section>
 
-    <section id="value" class="section split-section">
+    <section id="value" class="section split-section feature-seller-section">
       <div>
         <p class="eyebrow">Thinking About Selling?</p>
         <h2>Find Your Home Value</h2>
@@ -179,17 +199,6 @@
       </div>
       <div class="app-widget">
         <iframe style="width: 300px; height: 250px;" frameborder="0" scrolling="no" id="widgetPreview" src="https://boost-howardhanna.homespotter.com/sharewidget/show_widget/howardhanna?agent_id=4045633&customer_id=1391"></iframe>
-      </div>
-    </section>
-
-    <section id="about" class="section about-section">
-      <div class="about-photo"><img src="joshua-headshot.png" alt="Joshua White" /></div>
-      <div>
-        <p class="eyebrow">About Me</p>
-        <h2>Licensed in both New York and Pennsylvania</h2>
-        <p>I have over 15 years of experience in customer service and I have enjoyed working with people. I am an active listener and I strive to make my client’s needs, wants, and desires my priority. My goal is to make your experience as smooth as possible.</p>
-        <p>As a local native to the area for over 25 years and with a passion for real estate, I bring local knowledge and a client-first approach to every transaction. I am a proud father of one handsome son, and in my free time I enjoy running and spending time outside.</p>
-        <p>A proud member of Elmira-Corning Board of REALTORS® & Northern Mountains of Pennsylvania MLS, it would be my sincere pleasure to partner with you and manage all the details of your real estate transaction. Give me a call today! <a href="tel:16072076969">(607) 207-6969</a></p>
       </div>
     </section>
 
@@ -246,7 +255,7 @@
       </div>
     </section>
 
-    <section id="contact" class="section contact-section">
+    <section id="contact" class="section contact-section premium-contact-section">
       <img src="hh-logo-white-gold.png" alt="Howard Hanna Real Estate Services" />
       <p class="eyebrow">Ready When You Are</p>
       <h2>Contact Joshua White</h2>
@@ -274,19 +283,38 @@
     </section>
   </main>
 
-  <footer class="footer">
-    <p>© 2026 Joshua White | Howard Hanna Real Estate Services</p>
-    <p>Corning Office: 45 E Market Street, Corning, NY 14830 | Office: (607) 936-HOME | Cell: (607) 207-6969</p>
-    <p>Licensed in New York and Pennsylvania. Real estate information is for general informational purposes only. For legal, tax, lending, or financial advice, consult the appropriate licensed professional.</p>
-    <div class="footer-eho">
-      <svg viewBox="0 0 120 100" role="img" aria-label="Equal Housing Opportunity logo">
-        <path d="M10 48 L60 10 L110 48" fill="none" stroke="currentColor" stroke-width="12" stroke-linecap="square" stroke-linejoin="miter" />
-        <path d="M22 47 V88 H98 V47" fill="none" stroke="currentColor" stroke-width="10" />
-        <rect x="40" y="51" width="40" height="10" fill="currentColor" />
-        <rect x="40" y="68" width="40" height="10" fill="currentColor" />
-      </svg>
-      <span>We do business in accordance with the Federal Housing Law.</span>
+  <footer class="footer premium-footer">
+    <div class="footer-columns">
+      <div>
+        <img src="hh-logo-forest-gold.png" alt="Howard Hanna Real Estate Services" />
+        <p>Joshua White, Howard Hanna Real Estate Services. Serving buyers and sellers throughout Southern Tier NY and Northern Tier PA.</p>
+      </div>
+      <div>
+        <strong>Quick Links</strong>
+        <a href="#search">Search Homes</a>
+        <a href="#value">Home Value</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div>
+        <strong>Office</strong>
+        <p>45 E Market Street<br />Corning, NY 14830</p>
+        <p>Office: (607) 936-HOME<br />Cell: (607) 207-6969</p>
+      </div>
     </div>
+    <div class="footer-bottom-row">
+      <p>© 2026 Joshua White | Licensed in New York and Pennsylvania.</p>
+      <div class="footer-eho">
+        <svg viewBox="0 0 120 100" role="img" aria-label="Equal Housing Opportunity logo">
+          <path d="M10 48 L60 10 L110 48" fill="none" stroke="currentColor" stroke-width="12" stroke-linecap="square" stroke-linejoin="miter" />
+          <path d="M22 47 V88 H98 V47" fill="none" stroke="currentColor" stroke-width="10" />
+          <rect x="40" y="51" width="40" height="10" fill="currentColor" />
+          <rect x="40" y="68" width="40" height="10" fill="currentColor" />
+        </svg>
+        <span>We do business in accordance with the Federal Housing Law.</span>
+      </div>
+    </div>
+    <p class="fine-print">Real estate information is for general informational purposes only. For legal, tax, lending, or financial advice, consult the appropriate licensed professional.</p>
   </footer>
 
   <script src="joshua-ai.js"></script>
