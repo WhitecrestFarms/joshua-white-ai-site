@@ -44,6 +44,22 @@
   background: #fff;
 }
 
+.testimonial-frame-card {
+  padding: 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.testimonial-frame-card iframe {
+  width: 100%;
+  min-height: 720px;
+  border: 1px solid rgba(184, 161, 113, .32);
+  border-radius: 22px;
+  background: #fff;
+  display: block;
+}
+
 .fair-housing-section {
   background: #ffffff;
 }
@@ -158,6 +174,10 @@
   .fair-links a {
     width: 100%;
     text-align: center;
+  }
+
+  .testimonial-frame-card iframe {
+    min-height: 620px;
   }
 
   .equal-housing-block {
