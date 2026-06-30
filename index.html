@@ -12,10 +12,10 @@
   <meta property="og:type" content="website" />
   <meta property="og:image" content="joshua-headshot.png" />
 
-  <!-- RealScout Widgets -->
   <script src="https://em.realscout.com/widgets/realscout-web-components.umd.js" type="module"></script>
 
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="custom.css" />
 
   <style>
     realscout-advanced-search {
@@ -45,17 +45,17 @@
       <img src="joshua-hh-logo-wide.png" alt="Joshua W. White Howard Hanna Real Estate Services logo" />
     </a>
 
-    <button class="menu-toggle" aria-label="Open menu" onclick="document.body.classList.toggle('menu-open')">
-      ☰
-    </button>
+    <button class="menu-toggle" aria-label="Open menu" onclick="document.body.classList.toggle('menu-open')">☰</button>
 
     <nav class="main-nav">
       <a href="#search">Search</a>
       <a href="#value">Home Value</a>
       <a href="#listings">Listings</a>
       <a href="#mortgage">Mortgage</a>
+      <a href="#about">About</a>
       <a href="#reviews">Reviews</a>
-      <a href="#ai">Joshua AI</a>
+      <a href="#resources">HH Tools</a>
+      <a href="#fair-housing">Fair Housing</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
@@ -95,22 +95,10 @@
     </section>
 
     <section class="quick-actions">
-      <a href="#search">
-        <strong>Search Homes</strong>
-        <span>Browse active homes with RealScout.</span>
-      </a>
-      <a href="https://homevalue.howardhanna.com/joshuawilliamwhite" target="_blank" rel="noopener">
-        <strong>Home Value</strong>
-        <span>Start with a quick Howard Hanna valuation.</span>
-      </a>
-      <a href="#mortgage">
-        <strong>Mortgage</strong>
-        <span>Connect with 1st Priority Mortgage.</span>
-      </a>
-      <a href="#contact">
-        <strong>Talk to Joshua</strong>
-        <span>Call, text, email, or connect online.</span>
-      </a>
+      <a href="#search"><strong>Search Homes</strong><span>Browse active homes with RealScout.</span></a>
+      <a href="https://homevalue.howardhanna.com/joshuawilliamwhite" target="_blank" rel="noopener"><strong>Home Value</strong><span>Start with a quick Howard Hanna valuation.</span></a>
+      <a href="#mortgage"><strong>Mortgage</strong><span>Connect with 1st Priority Mortgage.</span></a>
+      <a href="#contact"><strong>Talk to Joshua</strong><span>Call, text, email, or connect online.</span></a>
     </section>
 
     <section id="ai" class="section ai-feature">
@@ -121,7 +109,6 @@
           Joshua AI is built directly into this website. It can answer common buying, selling, home value, showing, mortgage, review, and local real estate questions, then guide serious prospects to contact Joshua directly.
         </p>
       </div>
-
       <div class="ai-panel">
         <h3>How Joshua AI Can Help</h3>
         <ul>
@@ -141,7 +128,6 @@
         <h2>Search Homes</h2>
         <p>Start your home search across the areas Joshua serves.</p>
       </div>
-
       <div class="widget-card">
         <realscout-advanced-search agent-encoded-id="QWdlbnQtNDgyNTk="></realscout-advanced-search>
       </div>
@@ -151,9 +137,7 @@
       <div>
         <p class="eyebrow">Thinking About Selling?</p>
         <h2>Find Your Home Value</h2>
-        <p>
-          Get a starting estimate through Joshua's Howard Hanna home value tool, then connect for a more detailed local pricing conversation.
-        </p>
+        <p>Get a starting estimate through Joshua's Howard Hanna home value tool, then connect for a more detailed local pricing conversation.</p>
       </div>
       <a class="btn btn-gold btn-large" href="https://homevalue.howardhanna.com/joshuawilliamwhite" target="_blank" rel="noopener">Get My Home Value</a>
     </section>
@@ -163,7 +147,6 @@
         <p class="eyebrow">Featured Properties</p>
         <h2>My Listings</h2>
       </div>
-
       <div class="widget-card">
         <realscout-your-listings agent-encoded-id="QWdlbnQtNDgyNTk=" sort-order="STATUS_AND_SIGNIFICANT_CHANGE" listing-status="For Sale,For Rent,In Contract,Sold,Rented" property-types="SFR,MF,TC,LAL,MOBILE,OTHER"></realscout-your-listings>
       </div>
@@ -174,7 +157,6 @@
         <p class="eyebrow">Howard Hanna</p>
         <h2>Office Listings</h2>
       </div>
-
       <div class="widget-card">
         <realscout-office-listings agent-encoded-id="QWdlbnQtNDgyNTk=" sort-order="STATUS_AND_SIGNIFICANT_CHANGE" listing-status="For Sale,For Rent,In Contract,Sold,Rented" property-types="SFR,MF,TC,LAL,MOBILE,OTHER"></realscout-office-listings>
       </div>
@@ -184,11 +166,44 @@
       <div>
         <p class="eyebrow">Mortgage Partner</p>
         <h2>Start With 1st Priority Mortgage</h2>
-        <p>
-          Ready to talk financing? Use Joshua's personal 1st Priority Mortgage link to start the mortgage conversation.
-        </p>
+        <p>Ready to talk financing? Use Joshua's personal 1st Priority Mortgage link to start the mortgage conversation.</p>
       </div>
       <a class="btn btn-light btn-large" href="https://mymortgageapp.1stprioritymortgage.com/dr/c/1hy1e" target="_blank" rel="noopener">Start Mortgage Application</a>
+    </section>
+
+    <section id="app" class="section app-section">
+      <div>
+        <p class="eyebrow">Howard Hanna App</p>
+        <h2>Download My Howard Hanna App</h2>
+        <p>Take your home search with you and connect with Joshua through the Howard Hanna mobile experience.</p>
+      </div>
+      <div class="app-widget">
+        <iframe style="width: 300px; height: 250px;" frameborder="0" scrolling="no" id="widgetPreview" src="https://boost-howardhanna.homespotter.com/sharewidget/show_widget/howardhanna?agent_id=4045633&customer_id=1391"></iframe>
+      </div>
+    </section>
+
+    <section id="about" class="section about-section">
+      <div class="about-photo"><img src="joshua-headshot.png" alt="Joshua White" /></div>
+      <div>
+        <p class="eyebrow">About Me</p>
+        <h2>Licensed in both New York and Pennsylvania</h2>
+        <p>I have over 15 years of experience in customer service and I have enjoyed working with people. I am an active listener and I strive to make my client’s needs, wants, and desires my priority. My goal is to make your experience as smooth as possible.</p>
+        <p>As a local native to the area for over 25 years and with a passion for real estate, I bring local knowledge and a client-first approach to every transaction. I am a proud father of one handsome son, and in my free time I enjoy running and spending time outside.</p>
+        <p>A proud member of Elmira-Corning Board of REALTORS® & Northern Mountains of Pennsylvania MLS, it would be my sincere pleasure to partner with you and manage all the details of your real estate transaction. Give me a call today! <a href="tel:16072076969">(607) 207-6969</a></p>
+      </div>
+    </section>
+
+    <section id="resources" class="section">
+      <div class="section-heading centered">
+        <p class="eyebrow">Howard Hanna Tools</p>
+        <h2>Helpful Real Estate Resources</h2>
+        <p>Quick access to additional Howard Hanna buyer, seller, and market tools.</p>
+      </div>
+      <div class="resource-grid">
+        <a href="https://joshuawilliamwhite.howardhanna.com/find-it-first" target="_blank" rel="noopener"><strong>Find It First</strong><span>Get notified about homes before they hit the broader market.</span></a>
+        <a href="https://joshuawilliamwhite.howardhanna.com/hanna-list" target="_blank" rel="noopener"><strong>Hanna List</strong><span>Explore Howard Hanna listing tools and property search resources.</span></a>
+        <a href="https://joshuawilliamwhite.howardhanna.com/neighborhoodnews" target="_blank" rel="noopener"><strong>Neighborhood News</strong><span>Local market and neighborhood updates for buyers and sellers.</span></a>
+      </div>
     </section>
 
     <section id="reviews" class="section">
@@ -197,31 +212,26 @@
         <h2>Reviews & Testimonials</h2>
         <p>See what clients have shared about working with Joshua.</p>
       </div>
-
       <div class="review-links">
         <a href="https://share.google/YbejLCxPQaZYuZrGc" target="_blank" rel="noopener">Read Google Reviews</a>
         <a href="https://www.zillow.com/profile/JoshuaWhiteRealtor" target="_blank" rel="noopener">View Zillow Profile</a>
       </div>
-
       <div class="widget-card reviews-widget">
         <div id="TestimonialTree_Widget_35069"></div>
         <script type="text/javascript" src="https://application.testimonialtree.com/api/v1/widgets/script?widgetid=35069&Username=howardhanna_10601364"></script>
       </div>
     </section>
 
-    <section id="about" class="section about-section">
-      <div class="about-photo">
-        <img src="joshua-headshot.png" alt="Joshua White" />
-      </div>
-      <div>
-        <p class="eyebrow">Meet Joshua</p>
-        <h2>Local Guidance. Real Results.</h2>
-        <p>
-          Joshua White is a Howard Hanna Realtor® licensed in New York and Pennsylvania, serving buyers and sellers throughout the Southern Tier of New York and Northern Tier of Pennsylvania.
-        </p>
-        <p>
-          Whether you're buying your first home, selling a long-time property, relocating, investing, or just exploring your options, Joshua brings local market knowledge, responsive communication, and practical guidance to every step.
-        </p>
+    <section id="fair-housing" class="section fair-housing-section">
+      <p class="eyebrow">Equal Housing Opportunity</p>
+      <h2>Fair Housing</h2>
+      <p>Howard Hanna is committed to equal housing opportunities and providing housing services to all persons regardless of race, color, religion, sex, disability, national origin, or any other protected category under federal, state, or local law.</p>
+      <div class="fair-links">
+        <a href="https://www.justice.gov/crt/fair-housing-act-1" target="_blank" rel="noopener">Federal Fair Housing</a>
+        <a href="https://www.dos.ny.gov/licensing/docs/FairHousingNotice_new.pdf" target="_blank" rel="noopener">New York Fair Housing</a>
+        <a href="https://parealtor.app.box.com/s/10l3hyl4ky19dgp8cqluohttox3i6rvm" target="_blank" rel="noopener">Pennsylvania Fair Housing</a>
+        <a href="https://media.e-net.com/howardhanna/fairhousing/SOP_April_2022.pdf?__hstc=49138489.51950dae9f6cd1310cbae2a3ce6e29cc.1782693582664.1782693582664.1782783790131.2&__hssc=49138489.2.1782783790131&__hsfp=68afa418b29ef6bc1fd30101d16386a2" target="_blank" rel="noopener">NYS Standardized Operating Procedure</a>
+        <a href="https://media.e-net.com/howardhanna/fairhousing/ReasonableAccomodation.pdf?__hstc=49138489.51950dae9f6cd1310cbae2a3ce6e29cc.1782693582664.1782693582664.1782783790131.2&__hssc=49138489.2.1782783790131&__hsfp=68afa418b29ef6bc1fd30101d16386a2" target="_blank" rel="noopener">Reasonable Accommodation</a>
       </div>
     </section>
 
@@ -230,13 +240,19 @@
       <p class="eyebrow">Ready When You Are</p>
       <h2>Contact Joshua White</h2>
       <p>Have a question, want to tour a home, or need help deciding your next move?</p>
-
+      <div class="office-card">
+        <strong>Corning Office, NY</strong><br />
+        45 E Market Street<br />
+        Corning, NY 14830<br />
+        Office: <a href="tel:16079364663">(607) 936-HOME</a><br />
+        Cell: <a href="tel:16072076969">(607) 207-6969</a><br />
+        Email: <a href="mailto:joshuawhite@howardhanna.com">joshuawhite@howardhanna.com</a>
+      </div>
       <div class="cta-row centered-row">
         <a class="btn btn-gold" href="tel:16072076969">Call / Text Joshua</a>
         <a class="btn btn-light" href="mailto:joshuawhite@howardhanna.com">Email Joshua</a>
         <a class="btn btn-outline" href="#ai">Ask Joshua AI</a>
       </div>
-
       <div class="social-links">
         <a href="https://www.facebook.com/JoshuaWhiteRealtor" target="_blank" rel="noopener">Facebook</a>
         <a href="https://www.instagram.com/joshuawwhiterealtor/" target="_blank" rel="noopener">Instagram</a>
@@ -249,10 +265,8 @@
 
   <footer class="footer">
     <p>© 2026 Joshua White | Howard Hanna Real Estate Services</p>
-    <p>
-      Licensed in New York and Pennsylvania. Real estate information is for general informational purposes only.
-      For legal, tax, lending, or financial advice, consult the appropriate licensed professional.
-    </p>
+    <p>Corning Office: 45 E Market Street, Corning, NY 14830 | Office: (607) 936-HOME | Cell: (607) 207-6969</p>
+    <p>Licensed in New York and Pennsylvania. Real estate information is for general informational purposes only. For legal, tax, lending, or financial advice, consult the appropriate licensed professional.</p>
   </footer>
 
   <script src="joshua-ai.js"></script>
