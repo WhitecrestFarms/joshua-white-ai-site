@@ -1,3 +1,81 @@
+.refined-nav {
+  gap: 14px;
+}
+
+.refined-nav a {
+  white-space: nowrap;
+}
+
+.refined-nav .nav-cta {
+  background: var(--gold);
+  color: var(--white);
+  border-radius: 999px;
+  padding: 10px 16px;
+  box-shadow: 0 10px 22px rgba(184, 129, 40, .22);
+}
+
+.premium-actions a {
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+
+.premium-actions a:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 48px rgba(14, 58, 50, .16);
+  border-color: rgba(184, 129, 40, .42);
+}
+
+.about-featured {
+  background:
+    radial-gradient(circle at top right, rgba(159, 200, 189, .28), transparent 28rem),
+    linear-gradient(135deg, rgba(255,255,255,.98), rgba(236, 233, 211, .62));
+  border: 2px solid rgba(184, 129, 40, .28);
+}
+
+.about-featured .lead-copy {
+  font-size: 19px;
+  color: #3d3d3d;
+}
+
+.mini-cred-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin: 22px 0 0;
+}
+
+.mini-cred-grid span {
+  background: rgba(14, 58, 50, .08);
+  color: var(--forest);
+  border: 1px solid rgba(14, 58, 50, .16);
+  border-radius: 999px;
+  padding: 10px 12px;
+  text-align: center;
+  font-weight: 900;
+  font-size: 13px;
+}
+
+.about-cta-row {
+  margin-top: 24px;
+}
+
+.btn-light-bordered {
+  border-color: rgba(14, 58, 50, .18);
+}
+
+.feature-seller-section {
+  background:
+    linear-gradient(135deg, rgba(14, 58, 50, .96), rgba(0, 90, 78, .88));
+  color: var(--white);
+}
+
+.feature-seller-section h2 {
+  color: var(--white);
+}
+
+.feature-seller-section .eyebrow {
+  color: var(--pale-gold);
+}
+
 .resource-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -12,6 +90,12 @@
   color: var(--charcoal);
   text-decoration: none;
   box-shadow: 0 14px 42px rgba(14, 58, 50, .08);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.resource-grid a:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 48px rgba(14, 58, 50, .14);
 }
 
 .resource-grid strong {
@@ -147,26 +231,108 @@
   font-weight: 900;
 }
 
+.premium-footer {
+  width: 100%;
+  margin-top: 40px;
+  padding: 44px 5% 34px;
+  background: linear-gradient(135deg, rgba(14, 58, 50, .98), rgba(0, 90, 78, .94));
+  color: rgba(255,255,255,.88);
+  text-align: left;
+  border-top: 4px solid var(--gold);
+}
+
+.footer-columns {
+  display: grid;
+  grid-template-columns: 1.4fr .7fr 1fr;
+  gap: 36px;
+  width: min(1180px, 100%);
+  margin: 0 auto 28px;
+}
+
+.footer-columns img {
+  width: 190px;
+  max-width: 100%;
+  background: rgba(255,255,255,.92);
+  border-radius: 16px;
+  padding: 14px;
+  margin-bottom: 14px;
+}
+
+.footer-columns strong {
+  color: var(--pale-gold);
+  display: block;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+}
+
+.footer-columns a {
+  display: block;
+  color: var(--white);
+  text-decoration: none;
+  margin-bottom: 8px;
+  font-weight: 800;
+}
+
+.footer-bottom-row {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  border-top: 1px solid rgba(219, 207, 167, .28);
+  padding-top: 22px;
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: center;
+}
+
 .footer-eho {
-  margin: 20px auto 0;
+  margin: 0;
   display: inline-flex;
   gap: 14px;
   align-items: center;
   justify-content: center;
-  color: var(--forest);
+  color: var(--white);
   font-weight: 800;
 }
 
 .footer-eho svg {
   width: 58px;
-  color: #000;
+  color: var(--white);
   flex: 0 0 auto;
+}
+
+.fine-print {
+  width: min(1180px, 100%);
+  margin: 20px auto 0;
+  font-size: 13px;
+  color: rgba(255,255,255,.72);
+}
+
+@media (max-width: 1100px) {
+  .refined-nav {
+    gap: 10px;
+  }
+
+  .refined-nav a {
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 960px) {
   .resource-grid,
-  .app-section {
+  .app-section,
+  .footer-columns,
+  .footer-bottom-row {
     grid-template-columns: 1fr;
+    display: grid;
+  }
+
+  .mini-cred-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-bottom-row {
+    text-align: left;
   }
 }
 
@@ -178,6 +344,10 @@
 
   .testimonial-frame-card iframe {
     min-height: 620px;
+  }
+
+  .mini-cred-grid {
+    grid-template-columns: 1fr;
   }
 
   .equal-housing-block {
