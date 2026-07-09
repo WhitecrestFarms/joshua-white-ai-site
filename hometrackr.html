@@ -68,16 +68,16 @@
 
     .showcase-track {
       display: flex;
-      width: 500%;
-      animation: hometrackrSlide 30s infinite;
+      width: 900%;
+      animation: hometrackrSlide 54s infinite;
     }
 
     .showcase-slide {
-      width: 20%;
-      min-height: 520px;
+      width: 11.1111%;
+      min-height: 700px;
       padding: clamp(20px, 4vw, 42px);
       display: grid;
-      grid-template-columns: minmax(240px, .8fr) minmax(0, 1.2fr);
+      grid-template-columns: minmax(250px, .78fr) minmax(0, 1.22fr);
       gap: 32px;
       align-items: center;
       background:
@@ -87,9 +87,9 @@
     }
 
     .screenshot-frame {
-      min-height: 430px;
+      min-height: 620px;
       border-radius: 34px;
-      background: rgba(255,255,255,.94);
+      background: rgba(236, 233, 211, .94);
       border: 8px solid rgba(219, 207, 167, .55);
       box-shadow: 0 22px 52px rgba(0,0,0,.22);
       overflow: hidden;
@@ -101,7 +101,7 @@
     .screenshot-frame img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
       display: block;
     }
 
@@ -157,18 +157,22 @@
     }
 
     @keyframes hometrackrSlide {
-      0%, 16% { transform: translateX(0); }
-      20%, 36% { transform: translateX(-20%); }
-      40%, 56% { transform: translateX(-40%); }
-      60%, 76% { transform: translateX(-60%); }
-      80%, 96% { transform: translateX(-80%); }
+      0%, 8% { transform: translateX(0); }
+      11%, 19% { transform: translateX(-11.1111%); }
+      22%, 30% { transform: translateX(-22.2222%); }
+      33%, 41% { transform: translateX(-33.3333%); }
+      44%, 52% { transform: translateX(-44.4444%); }
+      55%, 63% { transform: translateX(-55.5555%); }
+      66%, 74% { transform: translateX(-66.6666%); }
+      77%, 85% { transform: translateX(-77.7777%); }
+      88%, 96% { transform: translateX(-88.8888%); }
       100% { transform: translateX(0); }
     }
 
     @media (max-width: 960px) {
       .app-feature-grid { grid-template-columns: 1fr; }
       .showcase-slide { grid-template-columns: 1fr; min-height: auto; }
-      .screenshot-frame { min-height: 360px; }
+      .screenshot-frame { min-height: 560px; }
     }
   </style>
 </head>
@@ -205,31 +209,47 @@
     </section>
 
     <section class="section showcase-section">
-      <div class="section-heading centered"><p class="eyebrow">App Preview</p><h2>See HomeTrackr in action</h2><p>A rotating preview area for HomeTrackr screenshots. Upload your selected images to this GitHub repo using the file names shown in each slide and they will appear here automatically.</p></div>
+      <div class="section-heading centered"><p class="eyebrow">App Preview</p><h2>See HomeTrackr in action</h2><p>Take a quick look at how HomeTrackr helps organize property details, documents, reminders, projects, rooms, move-in records, vehicles, and service dates.</p></div>
       <div class="showcase-window" aria-label="HomeTrackr app screenshot slideshow">
         <div class="showcase-track">
           <article class="showcase-slide">
-            <div class="screenshot-frame"><img src="hometrackr-slide-1.png" alt="HomeTrackr home dashboard screenshot" onerror="this.style.display='none'" /><div class="screenshot-fallback"><span>Image Slot 1</span><strong>Home Dashboard</strong><p>Upload as hometrackr-slide-1.png</p></div></div>
-            <div class="showcase-copy"><p class="eyebrow">Dashboard</p><h3>Start with a clear home overview.</h3><p>Keep your home records organized from one easy starting point, including maintenance, documents, photos, and reminders.</p></div>
+            <div class="screenshot-frame"><img src="hometrackr-slide-1.jpg" alt="HomeTrackr start your home record preview" onerror="this.style.display='none'" /><div class="screenshot-fallback"><span>Slide 1</span><strong>Start Your Home Record</strong><p>Upload as hometrackr-slide-1.jpg</p></div></div>
+            <div class="showcase-copy"><p class="eyebrow">Start Here</p><h3>Start your home record in minutes.</h3><p>Add your first property and begin tracking details, documents, reminders, insurance, taxes, utilities, and more.</p></div>
           </article>
           <article class="showcase-slide">
-            <div class="screenshot-frame"><img src="hometrackr-slide-2.png" alt="HomeTrackr maintenance and reminders screenshot" onerror="this.style.display='none'" /><div class="screenshot-fallback"><span>Image Slot 2</span><strong>Maintenance</strong><p>Upload as hometrackr-slide-2.png</p></div></div>
-            <div class="showcase-copy"><p class="eyebrow">Maintenance</p><h3>Track repairs, reminders, and recurring care.</h3><p>From HVAC to roof, appliances, utilities, detectors, pool/spa items, and more, HomeTrackr helps keep the important details close.</p></div>
+            <div class="screenshot-frame"><img src="hometrackr-slide-2.jpg" alt="HomeTrackr home dashboard preview" onerror="this.style.display='none'" /><div class="screenshot-fallback"><span>Slide 2</span><strong>Home Dashboard</strong><p>Upload as hometrackr-slide-2.jpg</p></div></div>
+            <div class="showcase-copy"><p class="eyebrow">Dashboard</p><h3>See your home at a glance.</h3><p>Monitor home health, reminders, timeline progress, projects, warranties, and assistant insights from one dashboard.</p></div>
           </article>
           <article class="showcase-slide">
-            <div class="screenshot-frame"><img src="hometrackr-slide-3.png" alt="HomeTrackr projects and renovations screenshot" onerror="this.style.display='none'" /><div class="screenshot-fallback"><span>Image Slot 3</span><strong>Projects</strong><p>Upload as hometrackr-slide-3.png</p></div></div>
-            <div class="showcase-copy"><p class="eyebrow">Projects</p><h3>Save project notes, receipts, and photos.</h3><p>Keep contractor notes, budgets, warranties, before-and-after photos, and project history organized by home.</p></div>
+            <div class="screenshot-frame"><img src="hometrackr-slide-3.jpg" alt="HomeTrackr everything in one place preview" onerror="this.style.display='none'" /><div class="screenshot-fallback"><span>Slide 3</span><strong>Everything in One Place</strong><p>Upload as hometrackr-slide-3.jpg</p></div></div>
+            <div class="showcase-copy"><p class="eyebrow">One Place</p><h3>Jump quickly between every key section.</h3><p>Search, reminders, documents, insurance, taxes, projects, home systems, and more stay organized inside your home profile.</p></div>
           </article>
           <article class="showcase-slide">
-            <div class="screenshot-frame"><img src="hometrackr-slide-4.png" alt="HomeTrackr paint and room details screenshot" onerror="this.style.display='none'" /><div class="screenshot-fallback"><span>Image Slot 4</span><strong>Paint & Rooms</strong><p>Upload as hometrackr-slide-4.png</p></div></div>
-            <div class="showcase-copy"><p class="eyebrow">Paint & Rooms</p><h3>Never lose a paint color again.</h3><p>Save wall, trim, and ceiling colors along with room notes, receipts, and helpful details for future touch-ups.</p></div>
+            <div class="screenshot-frame"><img src="hometrackr-slide-4.jpg" alt="HomeTrackr document vault preview" onerror="this.style.display='none'" /><div class="screenshot-fallback"><span>Slide 4</span><strong>Document Vault</strong><p>Upload as hometrackr-slide-4.jpg</p></div></div>
+            <div class="showcase-copy"><p class="eyebrow">Documents</p><h3>Organize documents and records.</h3><p>Keep home files, section records, receipts, warranties, manuals, system details, and important paperwork easy to find.</p></div>
           </article>
           <article class="showcase-slide">
-            <div class="screenshot-frame"><img src="hometrackr-slide-5.png" alt="HomeTrackr documents and receipts screenshot" onerror="this.style.display='none'" /><div class="screenshot-fallback"><span>Image Slot 5</span><strong>Documents</strong><p>Upload as hometrackr-slide-5.png</p></div></div>
-            <div class="showcase-copy"><p class="eyebrow">Documents</p><h3>Keep receipts and records together.</h3><p>Organize manuals, receipts, warranties, permits, contracts, and important paperwork so they are easier to find later.</p></div>
+            <div class="screenshot-frame"><img src="hometrackr-slide-5.jpg" alt="HomeTrackr projects and renovations preview" onerror="this.style.display='none'" /><div class="screenshot-fallback"><span>Slide 5</span><strong>Projects</strong><p>Upload as hometrackr-slide-5.jpg</p></div></div>
+            <div class="showcase-copy"><p class="eyebrow">Projects</p><h3>Plan projects and renovations.</h3><p>Track budgets, receipts, warranties, contractors, before-and-after progress, and improvement records for every project.</p></div>
+          </article>
+          <article class="showcase-slide">
+            <div class="screenshot-frame"><img src="hometrackr-slide-6.jpg" alt="HomeTrackr room details and paint preview" onerror="this.style.display='none'" /><div class="screenshot-fallback"><span>Slide 6</span><strong>Room Details</strong><p>Upload as hometrackr-slide-6.jpg</p></div></div>
+            <div class="showcase-copy"><p class="eyebrow">Rooms</p><h3>Save finishes and room details.</h3><p>Track paint colors, products, finishes, room information, receipts, and maintenance notes space by space.</p></div>
+          </article>
+          <article class="showcase-slide">
+            <div class="screenshot-frame"><img src="hometrackr-slide-7.jpg" alt="HomeTrackr move-in condition checklist preview" onerror="this.style.display='none'" /><div class="screenshot-fallback"><span>Slide 7</span><strong>Move-In Condition</strong><p>Upload as hometrackr-slide-7.jpg</p></div></div>
+            <div class="showcase-copy"><p class="eyebrow">Condition</p><h3>Document move-in condition.</h3><p>Capture every space before move-in with checklist guidance, date-stamped photo tracking, and condition records.</p></div>
+          </article>
+          <article class="showcase-slide">
+            <div class="screenshot-frame"><img src="hometrackr-slide-8.jpg" alt="HomeTrackr vehicle tracking preview" onerror="this.style.display='none'" /><div class="screenshot-fallback"><span>Slide 8</span><strong>Vehicle Tracking</strong><p>Upload as hometrackr-slide-8.jpg</p></div></div>
+            <div class="showcase-copy"><p class="eyebrow">Vehicles</p><h3>Track vehicles too.</h3><p>Store vehicle details, purchase information, lender details, service history, registration, insurance, and maintenance records.</p></div>
+          </article>
+          <article class="showcase-slide">
+            <div class="screenshot-frame"><img src="hometrackr-slide-9.jpg" alt="HomeTrackr service dates preview" onerror="this.style.display='none'" /><div class="screenshot-fallback"><span>Slide 9</span><strong>Service Dates</strong><p>Upload as hometrackr-slide-9.jpg</p></div></div>
+            <div class="showcase-copy"><p class="eyebrow">Reminders</p><h3>Stay ahead of service dates.</h3><p>Track registration, inspection, insurance, maintenance logs, service dates, and export records when needed.</p></div>
           </article>
         </div>
-        <div class="showcase-dots" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="showcase-dots" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
       </div>
     </section>
 
