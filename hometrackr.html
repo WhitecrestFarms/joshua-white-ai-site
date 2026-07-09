@@ -25,11 +25,155 @@
     .download-strip { text-align: center; background: radial-gradient(circle at top, rgba(184, 129, 40, .28), transparent 32rem), var(--forest); color: var(--white); }
     .download-strip h2, .download-strip .eyebrow { color: var(--pale-gold); }
     .app-support-note { margin-top: 22px; color: rgba(255,255,255,.82); font-size: 15px; }
-    @media (max-width: 960px) { .app-feature-grid { grid-template-columns: 1fr; } }
+
+    .btn-disabled {
+      background: rgba(255,255,255,.14);
+      border-color: rgba(219, 207, 167, .50);
+      color: var(--pale-gold);
+      cursor: default;
+      box-shadow: none;
+    }
+
+    .btn-disabled:hover { transform: none; }
+
+    .platform-note {
+      margin-top: 18px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255,255,255,.10);
+      border: 1px solid rgba(219, 207, 167, .36);
+      border-radius: 999px;
+      padding: 10px 16px;
+      color: var(--pale-gold);
+      font-weight: 900;
+    }
+
+    .showcase-section {
+      overflow: hidden;
+      background:
+        radial-gradient(circle at top left, rgba(159, 200, 189, .28), transparent 28rem),
+        linear-gradient(135deg, rgba(255,255,255,.98), rgba(236, 233, 211, .62));
+    }
+
+    .showcase-window {
+      width: min(980px, 100%);
+      margin: 32px auto 0;
+      overflow: hidden;
+      border-radius: 30px;
+      border: 1px solid rgba(184, 161, 113, .36);
+      background: var(--forest);
+      box-shadow: 0 24px 64px rgba(14, 58, 50, .18);
+    }
+
+    .showcase-track {
+      display: flex;
+      width: 500%;
+      animation: hometrackrSlide 30s infinite;
+    }
+
+    .showcase-slide {
+      width: 20%;
+      min-height: 520px;
+      padding: clamp(20px, 4vw, 42px);
+      display: grid;
+      grid-template-columns: minmax(240px, .8fr) minmax(0, 1.2fr);
+      gap: 32px;
+      align-items: center;
+      background:
+        radial-gradient(circle at top right, rgba(184,129,40,.30), transparent 24rem),
+        linear-gradient(135deg, #0e3a32, #005a4e);
+      color: var(--white);
+    }
+
+    .screenshot-frame {
+      min-height: 430px;
+      border-radius: 34px;
+      background: rgba(255,255,255,.94);
+      border: 8px solid rgba(219, 207, 167, .55);
+      box-shadow: 0 22px 52px rgba(0,0,0,.22);
+      overflow: hidden;
+      display: grid;
+      place-items: center;
+      position: relative;
+    }
+
+    .screenshot-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .screenshot-fallback {
+      padding: 28px;
+      text-align: center;
+      color: var(--forest);
+    }
+
+    .screenshot-fallback strong {
+      display: block;
+      font-size: 30px;
+      line-height: 1.05;
+      margin-bottom: 12px;
+    }
+
+    .screenshot-fallback span {
+      color: var(--gold);
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      font-size: 12px;
+    }
+
+    .showcase-copy .eyebrow,
+    .showcase-copy h3 {
+      color: var(--pale-gold);
+    }
+
+    .showcase-copy h3 {
+      font-size: clamp(30px, 4vw, 48px);
+    }
+
+    .showcase-copy p {
+      color: rgba(255,255,255,.90);
+      font-size: 18px;
+    }
+
+    .showcase-dots {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      padding: 18px;
+      background: rgba(255,255,255,.95);
+    }
+
+    .showcase-dots span {
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: var(--bronze);
+      opacity: .55;
+    }
+
+    @keyframes hometrackrSlide {
+      0%, 16% { transform: translateX(0); }
+      20%, 36% { transform: translateX(-20%); }
+      40%, 56% { transform: translateX(-40%); }
+      60%, 76% { transform: translateX(-60%); }
+      80%, 96% { transform: translateX(-80%); }
+      100% { transform: translateX(0); }
+    }
+
+    @media (max-width: 960px) {
+      .app-feature-grid { grid-template-columns: 1fr; }
+      .showcase-slide { grid-template-columns: 1fr; min-height: auto; }
+      .screenshot-frame { min-height: 360px; }
+    }
   </style>
 </head>
 <body>
-  <div class="top-strip"><span>HomeTrackr Home Log</span><span>Now Live on the App Store</span><span>Built for Better Home Organization</span></div>
+  <div class="top-strip"><span>HomeTrackr Home Log</span><span>Now Live on the App Store</span><span>Android / Google Play Coming Soon</span></div>
 
   <header class="site-header">
     <a class="logo-lockup" href="index.html#home" aria-label="Joshua White Home"><img src="joshua-hh-logo-wide.png" alt="Joshua W. White Howard Hanna Real Estate Services logo" /></a>
@@ -54,9 +198,39 @@
         <h1>Keep every home detail in one organized place.</h1>
         <p class="lead-copy">HomeTrackr helps homeowners, buyers, sellers, renters, and landlords track maintenance, receipts, warranties, paint colors, projects, photos, vehicles, and important property records.</p>
         <div class="hometrackr-points"><span>Maintenance Logs</span><span>Receipts & Warranties</span><span>Paint & Project Notes</span><span>Move-In Photo Records</span></div>
-        <div class="cta-row"><a class="btn btn-gold btn-large" href="https://apps.apple.com/us/app/hometrackr-home-log/id6785076449" target="_blank" rel="noopener">Download on the App Store</a><a class="btn btn-light btn-light-bordered" href="https://whitecrestfarms.github.io/hometrackr-support/" target="_blank" rel="noopener">Support Page</a><a class="btn btn-outline" href="index.html#contact">Ask Joshua About It</a></div>
+        <div class="cta-row"><a class="btn btn-gold btn-large" href="https://apps.apple.com/us/app/hometrackr-home-log/id6785076449" target="_blank" rel="noopener">Download on the App Store</a><a class="btn btn-light btn-light-bordered" href="https://whitecrestfarms.github.io/hometrackr-support/" target="_blank" rel="noopener">Support Page</a><span class="btn btn-disabled btn-large">Android / Google Play Coming Soon</span></div>
+        <div class="platform-note">Android app is in the works and coming soon.</div>
       </div>
       <div class="hometrackr-card"><div class="app-icon-mock">HT</div><strong>HomeTrackr</strong><span>Home Log</span><p>Built to help people stay organized long after closing day.</p></div>
+    </section>
+
+    <section class="section showcase-section">
+      <div class="section-heading centered"><p class="eyebrow">App Preview</p><h2>See HomeTrackr in action</h2><p>A rotating preview area for HomeTrackr screenshots. Upload your selected images to this GitHub repo using the file names shown in each slide and they will appear here automatically.</p></div>
+      <div class="showcase-window" aria-label="HomeTrackr app screenshot slideshow">
+        <div class="showcase-track">
+          <article class="showcase-slide">
+            <div class="screenshot-frame"><img src="hometrackr-slide-1.png" alt="HomeTrackr home dashboard screenshot" onerror="this.style.display='none'" /><div class="screenshot-fallback"><span>Image Slot 1</span><strong>Home Dashboard</strong><p>Upload as hometrackr-slide-1.png</p></div></div>
+            <div class="showcase-copy"><p class="eyebrow">Dashboard</p><h3>Start with a clear home overview.</h3><p>Keep your home records organized from one easy starting point, including maintenance, documents, photos, and reminders.</p></div>
+          </article>
+          <article class="showcase-slide">
+            <div class="screenshot-frame"><img src="hometrackr-slide-2.png" alt="HomeTrackr maintenance and reminders screenshot" onerror="this.style.display='none'" /><div class="screenshot-fallback"><span>Image Slot 2</span><strong>Maintenance</strong><p>Upload as hometrackr-slide-2.png</p></div></div>
+            <div class="showcase-copy"><p class="eyebrow">Maintenance</p><h3>Track repairs, reminders, and recurring care.</h3><p>From HVAC to roof, appliances, utilities, detectors, pool/spa items, and more, HomeTrackr helps keep the important details close.</p></div>
+          </article>
+          <article class="showcase-slide">
+            <div class="screenshot-frame"><img src="hometrackr-slide-3.png" alt="HomeTrackr projects and renovations screenshot" onerror="this.style.display='none'" /><div class="screenshot-fallback"><span>Image Slot 3</span><strong>Projects</strong><p>Upload as hometrackr-slide-3.png</p></div></div>
+            <div class="showcase-copy"><p class="eyebrow">Projects</p><h3>Save project notes, receipts, and photos.</h3><p>Keep contractor notes, budgets, warranties, before-and-after photos, and project history organized by home.</p></div>
+          </article>
+          <article class="showcase-slide">
+            <div class="screenshot-frame"><img src="hometrackr-slide-4.png" alt="HomeTrackr paint and room details screenshot" onerror="this.style.display='none'" /><div class="screenshot-fallback"><span>Image Slot 4</span><strong>Paint & Rooms</strong><p>Upload as hometrackr-slide-4.png</p></div></div>
+            <div class="showcase-copy"><p class="eyebrow">Paint & Rooms</p><h3>Never lose a paint color again.</h3><p>Save wall, trim, and ceiling colors along with room notes, receipts, and helpful details for future touch-ups.</p></div>
+          </article>
+          <article class="showcase-slide">
+            <div class="screenshot-frame"><img src="hometrackr-slide-5.png" alt="HomeTrackr documents and receipts screenshot" onerror="this.style.display='none'" /><div class="screenshot-fallback"><span>Image Slot 5</span><strong>Documents</strong><p>Upload as hometrackr-slide-5.png</p></div></div>
+            <div class="showcase-copy"><p class="eyebrow">Documents</p><h3>Keep receipts and records together.</h3><p>Organize manuals, receipts, warranties, permits, contracts, and important paperwork so they are easier to find later.</p></div>
+          </article>
+        </div>
+        <div class="showcase-dots" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+      </div>
     </section>
 
     <section class="section">
@@ -79,8 +253,8 @@
     <section class="section download-strip">
       <p class="eyebrow">Ready to try it?</p>
       <h2>Download HomeTrackr Home Log</h2>
-      <p>Available now on the Apple App Store.</p>
-      <div class="cta-row centered-row"><a class="btn btn-gold btn-large" href="https://apps.apple.com/us/app/hometrackr-home-log/id6785076449" target="_blank" rel="noopener">Download on the App Store</a><a class="btn btn-light btn-large" href="index.html#contact">Contact Joshua</a></div>
+      <p>Available now on the Apple App Store. Android / Google Play app is in the works and coming soon.</p>
+      <div class="cta-row centered-row"><a class="btn btn-gold btn-large" href="https://apps.apple.com/us/app/hometrackr-home-log/id6785076449" target="_blank" rel="noopener">Download on the App Store</a><span class="btn btn-disabled btn-large">Google Play Coming Soon</span><a class="btn btn-light btn-large" href="index.html#contact">Contact Joshua</a></div>
       <p class="app-support-note">Need help or have a support question? Visit the HomeTrackr support page from the button above.</p>
     </section>
   </main>
