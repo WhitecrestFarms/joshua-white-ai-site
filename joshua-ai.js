@@ -144,6 +144,14 @@
   }
 
   function buildWidget() {
+    document.querySelectorAll(".nav-cta").forEach(link => {
+      link.textContent = "Meet Kiki";
+      if (!link.getAttribute("href") || link.getAttribute("href") === "#ai") link.setAttribute("href", "index.html#ai");
+    });
+    document.querySelectorAll('a[href="index.html#ai"],a[href="#ai"]').forEach(link => {
+      if (link.classList.contains("btn") && /Joshua AI/i.test(link.textContent)) link.textContent = "Ask Kiki";
+    });
+
     createStyles();
     const launcher = document.createElement("button");
     launcher.className = "jw-ai-launcher";
