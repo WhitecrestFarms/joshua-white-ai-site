@@ -147,12 +147,12 @@
     createStyles();
     const launcher = document.createElement("button");
     launcher.className = "jw-ai-launcher";
-    launcher.innerHTML = `<span>💬</span><span>Ask Joshua AI</span>`;
+    launcher.innerHTML = `<span>💬</span><span>Ask Kiki</span>`;
     const windowEl = document.createElement("section");
     windowEl.className = "jw-ai-window";
-    windowEl.setAttribute("aria-label", "Joshua AI chat assistant");
+    windowEl.setAttribute("aria-label", "Kiki, Joshua's AI assistant");
     windowEl.innerHTML = `
-      <div class="jw-ai-header"><div><strong>Joshua AI</strong><span>Joshua White's real estate assistant</span></div><button class="jw-ai-close" aria-label="Close Joshua AI">×</button></div>
+      <div class="jw-ai-header"><div><strong>Kiki</strong><span>Joshua's AI Assistant</span></div><button class="jw-ai-close" aria-label="Close Kiki">×</button></div>
       <div class="jw-ai-intro">✨ Try: “What is my home worth?” or “I want to buy in Corning.”</div>
       <div class="jw-ai-messages"></div>
       <div class="jw-quick">
@@ -190,13 +190,13 @@
       const type = windowEl.querySelector(".jw-lead-type").value;
       const area = windowEl.querySelector(".jw-lead-area").value;
       const notes = windowEl.querySelector(".jw-lead-notes").value;
-      windowEl.querySelector(".jw-lead-send").href = leadFormUrl(`Joshua AI Lead - ${type}`, `Name: ${name}\nPhone/Email: ${phone}\nNeed: ${type}\nArea/Address: ${area}\n\nNotes:\n${notes}`);
+      windowEl.querySelector(".jw-lead-send").href = leadFormUrl(`Kiki AI Lead - ${type}`, `Name: ${name}\nPhone/Email: ${phone}\nNeed: ${type}\nArea/Address: ${area}\n\nNotes:\n${notes}`);
     };
 
     windowEl.querySelectorAll(".jw-lead-panel input,.jw-lead-panel select,.jw-lead-panel textarea").forEach(el => el.addEventListener("input", updateLeadMail));
     windowEl.querySelector(".jw-lead-close").addEventListener("click", closeLeadForm);
 
-    addMessage(messages, "bot", `Hi, I'm Joshua AI — Joshua White's digital real estate assistant. I can help with home search, home values, buying, selling, mortgage options, reviews, or connecting you with Joshua. What can I help with today?`, [["Search Homes", LINKS.search], ["Home Value", LINKS.value], ["Send Joshua My Info", "#lead-form"]], openLeadForm);
+    addMessage(messages, "bot", `Hi, I'm Kiki — Joshua White's digital real estate assistant. I can help with home search, home values, buying, selling, mortgage options, reviews, or connecting you with Joshua. What can I help with today?`, [["Search Homes", LINKS.search], ["Home Value", LINKS.value], ["Send Joshua My Info", "#lead-form"]], openLeadForm);
 
     launcher.addEventListener("click", () => { windowEl.classList.toggle("open"); if (windowEl.classList.contains("open")) input.focus(); });
     windowEl.querySelector(".jw-ai-close").addEventListener("click", () => windowEl.classList.remove("open"));
