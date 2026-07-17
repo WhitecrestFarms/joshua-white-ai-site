@@ -72,29 +72,53 @@
 
     const style = document.createElement('style');
     style.textContent = `
-      .kiki-showcase{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(330px,.95fr) minmax(280px,.8fr);gap:24px;background:linear-gradient(135deg,#fffdf7,#f1eedf);border:2px solid #b88128;border-radius:30px;padding:38px;box-shadow:0 20px 50px rgba(14,58,50,.08);align-items:stretch}
-      .kiki-showcase>*{min-width:0}
+      .kiki-showcase{container-type:inline-size;display:grid;grid-template-columns:1fr;gap:24px;background:linear-gradient(135deg,#fffdf7,#f1eedf);border:2px solid #b88128;border-radius:30px;padding:clamp(20px,3.2vw,38px);box-shadow:0 20px 50px rgba(14,58,50,.08);align-items:start;overflow:hidden}
+      .kiki-showcase,.kiki-showcase *{box-sizing:border-box}
+      .kiki-showcase>*{min-width:0;max-width:100%}
       .kiki-intro{display:flex;flex-direction:column;min-width:0}
-      .kiki-brand{display:grid;grid-template-columns:126px minmax(0,1fr);align-items:center;gap:18px;margin-bottom:24px;min-width:0}
-      .kiki-brand-copy{min-width:0}
-      .kiki-logo{width:126px;max-width:100%}
+      .kiki-brand{display:grid;grid-template-columns:clamp(88px,18cqi,126px) minmax(0,1fr);align-items:center;gap:18px;margin-bottom:24px;min-width:0}
+      .kiki-brand-copy{min-width:0;overflow:hidden}
+      .kiki-logo{width:100%;max-width:126px}
       .kiki-logo svg,.kiki-mini svg,.kiki-chat-logo svg{width:100%;display:block}
-      .kiki-script{display:block;font-family:Georgia,serif;font-style:italic;font-size:36px;line-height:1;color:#b88128;margin:0 0 -6px}
-      .kiki-brand h2{font-family:Georgia,serif;font-size:clamp(48px,4.6vw,66px);line-height:.9;color:#0e3a32;margin:0;white-space:nowrap}
-      .kiki-brand p{font-size:12px;line-height:1.45;text-transform:uppercase;letter-spacing:.1em;font-weight:900;color:#0e3a32;margin:10px 0;overflow-wrap:anywhere}
+      .kiki-script{display:block;font-family:Georgia,serif;font-style:italic;font-size:clamp(28px,5cqi,36px);line-height:1;color:#b88128;margin:0 0 -5px}
+      .kiki-brand h2{font-family:Georgia,serif;font-size:clamp(44px,9cqi,66px);line-height:.9;color:#0e3a32;margin:0;white-space:normal;overflow-wrap:anywhere}
+      .kiki-brand p{font-size:clamp(10px,1.8cqi,12px);line-height:1.45;text-transform:uppercase;letter-spacing:.09em;font-weight:900;color:#0e3a32;margin:10px 0;overflow-wrap:anywhere}
       .kiki-brand b{display:inline-block;background:#0e3a32;color:#fff;border-radius:999px;padding:8px 13px;text-transform:uppercase;font-size:11px;letter-spacing:.07em}
       .kiki-intro-copy{display:grid;gap:12px}
-      .kiki-intro-copy p{font-size:16px;line-height:1.65;color:#2e2e2e;margin:0}
+      .kiki-intro-copy p{font-size:16px;line-height:1.65;color:#2e2e2e;margin:0;overflow-wrap:anywhere}
       .kiki-emphasis{font-weight:900;color:#0e3a32!important}
-      .kiki-note{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid rgba(184,129,40,.35);border-radius:18px;padding:16px;margin-top:22px}
-      .kiki-mini{width:48px;flex:0 0 48px}.kiki-note strong{display:block;color:#0e3a32;text-transform:uppercase;margin-bottom:5px}.kiki-note em{display:block;line-height:1.5}
+      .kiki-note{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid rgba(184,129,40,.35);border-radius:18px;padding:16px;margin-top:22px;min-width:0}
+      .kiki-mini{width:48px;flex:0 0 48px}.kiki-note>div:last-child{min-width:0}.kiki-note strong{display:block;color:#0e3a32;text-transform:uppercase;margin-bottom:5px}.kiki-note em{display:block;line-height:1.5;overflow-wrap:anywhere}
       .kiki-chat-preview{background:#fff;border-radius:22px;overflow:hidden;box-shadow:0 18px 42px rgba(14,58,50,.15);border:1px solid rgba(14,58,50,.12);min-width:0}
-      .kiki-chat-head{display:flex;align-items:center;gap:11px;background:linear-gradient(135deg,#0e3a32,#005a4e);color:#fff;padding:13px}.kiki-chat-logo{width:50px;flex:0 0 50px}.kiki-chat-head strong{display:block;font-size:21px}.kiki-chat-head span{font-size:12px;color:#dbcfa7}
-      .kiki-chat-body{display:flex;flex-direction:column;gap:12px;padding:18px;min-height:540px;background:linear-gradient(#fff,#f5f2e8)}.kiki-chat-body>small{text-align:center;color:#888}.bubble{display:flex;flex-direction:column;gap:5px;padding:13px 15px;border-radius:18px;max-width:82%;font-size:14px;line-height:1.4}.bubble.user{align-self:flex-end;background:#fff9ef;border:1px solid rgba(184,129,40,.22)}.bubble.kiki{align-self:flex-start;background:#e4efeb;border:1px solid rgba(0,90,78,.15)}.bubble b{color:#b88128}.kiki-open{margin-top:auto;display:flex;justify-content:space-between;align-items:center;border:1px solid #ddd;background:#fff;border-radius:999px;padding:10px 12px 10px 16px;color:#777;cursor:pointer}.kiki-open b{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:#0e3a32;color:#fff}
-      .kiki-help{background:linear-gradient(160deg,#0e3a32,#005a4e);color:#fff;border-radius:22px;padding:26px;min-width:0}.kiki-help>p{color:#b88128;text-transform:uppercase;font-weight:900;letter-spacing:.1em;margin:0 0 8px}.kiki-help h3{color:#fff;font-size:27px;line-height:1.05;margin:0 0 20px}.kiki-list{display:grid;gap:6px}.kiki-list button{display:flex;gap:12px;align-items:center;border:0;border-bottom:1px solid rgba(184,129,40,.32);background:transparent;color:#b88128;text-align:left;padding:10px 0;font-weight:900;cursor:pointer}.kiki-list span{color:#fff}.kiki-help em{display:block;text-align:center;line-height:1.5;margin-top:20px}.kiki-cta{grid-column:1/-1;justify-self:center;border:1px solid rgba(184,129,40,.35);background:#fff;color:#0e3a32;border-radius:999px;padding:14px 24px;font-size:16px;cursor:pointer}.kiki-cta strong{color:#b88128}
-      @media(max-width:1320px){.kiki-showcase{grid-template-columns:minmax(0,1fr) minmax(320px,1fr)}.kiki-help{grid-column:1/-1}.kiki-list{grid-template-columns:repeat(2,minmax(0,1fr))}.kiki-brand{grid-template-columns:112px minmax(0,1fr)}.kiki-logo{width:112px}.kiki-brand h2{font-size:56px}}
-      @media(max-width:850px){.kiki-showcase{grid-template-columns:1fr;padding:26px}.kiki-help,.kiki-cta{grid-column:auto}.kiki-list{grid-template-columns:1fr 1fr}.kiki-chat-body{min-height:500px}}
-      @media(max-width:620px){.kiki-showcase{padding:20px}.kiki-brand{grid-template-columns:88px minmax(0,1fr);gap:14px}.kiki-logo{width:88px}.kiki-brand h2{font-size:44px}.kiki-script{font-size:28px}.kiki-brand p{font-size:10px}.kiki-list{grid-template-columns:1fr}.kiki-cta{border-radius:18px;text-align:center}.kiki-note{padding:14px}.kiki-chat-body{min-height:460px}}
+      .kiki-chat-head{display:flex;align-items:center;gap:11px;background:linear-gradient(135deg,#0e3a32,#005a4e);color:#fff;padding:13px;min-width:0}.kiki-chat-logo{width:50px;flex:0 0 50px}.kiki-chat-head>div:last-child{min-width:0}.kiki-chat-head strong{display:block;font-size:21px}.kiki-chat-head span{display:block;font-size:12px;color:#dbcfa7;overflow-wrap:anywhere}
+      .kiki-chat-body{display:flex;flex-direction:column;gap:12px;padding:18px;min-height:500px;background:linear-gradient(#fff,#f5f2e8)}.kiki-chat-body>small{text-align:center;color:#888}.bubble{display:flex;flex-direction:column;gap:5px;padding:13px 15px;border-radius:18px;max-width:88%;font-size:14px;line-height:1.4;overflow-wrap:anywhere}.bubble.user{align-self:flex-end;background:#fff9ef;border:1px solid rgba(184,129,40,.22)}.bubble.kiki{align-self:flex-start;background:#e4efeb;border:1px solid rgba(0,90,78,.15)}.bubble b{color:#b88128}.kiki-open{margin-top:auto;display:flex;justify-content:space-between;align-items:center;border:1px solid #ddd;background:#fff;border-radius:999px;padding:10px 12px 10px 16px;color:#777;cursor:pointer;width:100%}.kiki-open b{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:#0e3a32;color:#fff}
+      .kiki-help{background:linear-gradient(160deg,#0e3a32,#005a4e);color:#fff;border-radius:22px;padding:26px;min-width:0}.kiki-help>p{color:#b88128;text-transform:uppercase;font-weight:900;letter-spacing:.1em;margin:0 0 8px}.kiki-help h3{color:#fff;font-size:27px;line-height:1.05;margin:0 0 20px;overflow-wrap:anywhere}.kiki-list{display:grid;grid-template-columns:1fr;gap:6px}.kiki-list button{display:flex;gap:12px;align-items:center;border:0;border-bottom:1px solid rgba(184,129,40,.32);background:transparent;color:#b88128;text-align:left;padding:10px 0;font-weight:900;cursor:pointer;min-width:0}.kiki-list span{color:#fff;overflow-wrap:anywhere}.kiki-help em{display:block;text-align:center;line-height:1.5;margin-top:20px}.kiki-cta{justify-self:center;border:1px solid rgba(184,129,40,.35);background:#fff;color:#0e3a32;border-radius:999px;padding:14px 24px;font-size:16px;cursor:pointer;max-width:100%;white-space:normal;text-align:center}.kiki-cta strong{color:#b88128}
+
+      @container (min-width:760px){
+        .kiki-showcase{grid-template-columns:minmax(0,1fr) minmax(300px,1fr)}
+        .kiki-help{grid-column:1/-1}
+        .kiki-list{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:24px}
+        .kiki-cta{grid-column:1/-1}
+      }
+
+      @container (min-width:1180px){
+        .kiki-showcase{grid-template-columns:minmax(0,1.08fr) minmax(320px,.92fr) minmax(280px,.8fr)}
+        .kiki-help{grid-column:auto}
+        .kiki-list{grid-template-columns:1fr}
+        .kiki-cta{grid-column:1/-1}
+      }
+
+      @media(max-width:620px){
+        .kiki-showcase{padding:20px;border-radius:22px}
+        .kiki-brand{grid-template-columns:82px minmax(0,1fr);gap:14px}
+        .kiki-brand h2{font-size:44px}
+        .kiki-script{font-size:28px}
+        .kiki-brand p{font-size:10px}
+        .kiki-list{grid-template-columns:1fr}
+        .kiki-cta{border-radius:18px}
+        .kiki-note{padding:14px}
+        .kiki-chat-body{min-height:440px}
+      }
     `;
     document.head.appendChild(style);
   }
