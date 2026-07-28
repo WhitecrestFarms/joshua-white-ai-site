@@ -1,1 +1,246 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>DealTrackr for Agents | Transaction Management App</title><meta name="description" content="DealTrackr helps real estate agents manage transactions, deadlines, contacts, production goals, notes, calendars, and follow-ups."><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="custom.css"><link rel="stylesheet" href="pages.css"><link rel="stylesheet" href="tech.css"></head><body><div class="top-strip"><span>DealTrackr for Agents</span><span>Now Live on the App Store</span><span>Built Specifically for Real Estate Professionals</span></div><header class="site-header"><a class="logo-lockup" href="index.html"><img src="joshua-hh-logo-wide.png" alt="Joshua White Howard Hanna"></a><button class="menu-toggle" aria-label="Open menu" onclick="document.body.classList.toggle('menu-open')">☰</button><nav class="main-nav refined-nav"><a href="search.html">Search</a><a href="home-value.html">Home Value</a><a href="listings.html">Listings</a><a href="index.html#about">About</a><a href="technology.html">Technology</a><a href="hometrackr.html">HomeTrackr</a><a class="active-tab" href="dealtrackr.html">DealTrackr</a><a href="contact.html">Contact</a><a class="nav-cta" href="index.html#ai">Meet Kiki</a></nav></header><main><section class="section tech-page-hero"><p class="eyebrow">Built for REALTORS®</p><h1>Manage every transaction from contract to closing.</h1><p class="lead-copy">DealTrackr keeps your pipeline, transaction dates, reminders, contacts, notes, goals, and follow-ups together in one streamlined app—without complicated systems or clutter.</p><div class="cta-row" style="justify-content:center"><a class="btn btn-gold btn-large" href="https://apps.apple.com/us/app/dealtrackr-for-agents/id6794187654" target="_blank" rel="noopener">Download on the App Store</a><a class="btn btn-light" href="technology.html">Explore Technology</a></div></section><section class="section"><div class="product-showcase"><div class="product-visual dark"><div><div class="app-mark deal">DT</div><h2>DealTrackr</h2><p>For Agents</p></div></div><div class="product-panel"><p class="eyebrow">Your Business at a Glance</p><h2>A simpler way to stay on top of every deal.</h2><p>Whether you are managing one transaction or an entire pipeline, DealTrackr gives you a focused workspace for the information that matters most.</p><div class="tech-feature-list"><span>Buyer transactions</span><span>Seller transactions</span><span>Custom deadlines</span><span>Recurring follow-ups</span><span>Production goals</span><span>Client contacts</span></div></div></div></section><section class="section"><div class="section-heading centered"><p class="eyebrow">Core Features</p><h2>Everything agents need to keep deals moving</h2></div><div class="feature-grid-tech"><article><h3>Transaction Management</h3><p>Track buyer and seller transactions, key dates, notes, contacts, and progress in one place.</p></article><article><h3>Calendar & Deadlines</h3><p>Manage contract milestones, closing dates, custom deadlines, and recurring reminders.</p></article><article><h3>Pipeline</h3><p>See active opportunities and transaction stages so nothing disappears into scattered notes.</p></article><article><h3>Client & Vendor Contacts</h3><p>Store client, attorney, lender, inspector, contractor, and vendor information with the deal.</p></article><article><h3>Production Goals</h3><p>Track progress toward volume, units, and income goals with a clear production overview.</p></article><article><h3>Personalized Themes</h3><p>Choose preset themes or customize the app’s colors to better match your brand and workflow.</p></article></div></section><section class="section why-tech"><p class="eyebrow">Why I Built DealTrackr</p><h2>Created from the daily reality of working in real estate.</h2><p>As an active REALTOR®, I wanted a straightforward way to manage dates, contacts, notes, follow-ups, and production without building my business around an oversized software platform.</p><p>DealTrackr was designed to feel useful immediately: simple enough for one agent, organized enough for a growing pipeline, and flexible enough to support the way each professional works.</p><strong>Built by an agent, for agents.</strong></section><section class="section download-strip tech-page-hero"><p class="eyebrow">Launch Edition</p><h2>Take control of your transactions today.</h2><p>DealTrackr for Agents is available now for iPhone and iPad through the iOS App Store.</p><div class="cta-row" style="justify-content:center"><a class="btn btn-gold btn-large" href="https://apps.apple.com/us/app/dealtrackr-for-agents/id6794187654" target="_blank" rel="noopener">Download DealTrackr</a><button class="btn btn-light" type="button" onclick="document.querySelector('.jw-ai-launcher')?.click()">Ask Kiki About DealTrackr</button></div></section></main><footer class="footer premium-footer"><div class="footer-columns"><div><img src="hh-logo-forest-gold.png" alt="Howard Hanna"><p>DealTrackr was created by Joshua White, REALTOR® and real estate technology creator.</p></div><div><strong>Explore</strong><a href="technology.html">Technology</a><a href="hometrackr.html">HomeTrackr</a><a href="index.html#ai">Kiki AI</a><a href="index.html">Joshua White Real Estate</a></div><div><strong>Support</strong><p>Questions about DealTrackr?</p><a href="mailto:hometrackrsupport@gmail.com">Email App Support</a></div></div><div class="footer-bottom-row"><p>© 2026 Joshua White. DealTrackr for Agents.</p></div></footer><script src="joshua-ai.js"></script><script src="hometrackr-ai-addon.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DealTrackr for Agents | Transaction Management App</title>
+  <meta name="description" content="DealTrackr helps real estate agents manage transactions, deadlines, contacts, production goals, notes, calendars, and follow-ups." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="custom.css" />
+  <link rel="stylesheet" href="pages.css" />
+  <link rel="stylesheet" href="tech.css" />
+  <style>
+    .active-tab { color: var(--gold) !important; }
+    .deal-showcase-section {
+      overflow: hidden;
+      background:
+        radial-gradient(circle at top left, rgba(184,129,40,.20), transparent 30rem),
+        linear-gradient(135deg, rgba(255,255,255,.99), rgba(236,233,211,.66));
+    }
+    .deal-showcase-window {
+      width: min(1020px, 100%);
+      margin: 34px auto 0;
+      overflow: hidden;
+      border-radius: 30px;
+      border: 1px solid rgba(184,161,113,.40);
+      background: #003f35;
+      box-shadow: 0 24px 64px rgba(14,58,50,.20);
+    }
+    .deal-showcase-track {
+      display: flex;
+      width: 1000%;
+      animation: dealtrackrSlide 70s infinite;
+    }
+    .deal-showcase-slide {
+      width: 10%;
+      min-height: 720px;
+      padding: clamp(20px,4vw,44px);
+      display: grid;
+      grid-template-columns: minmax(260px,.78fr) minmax(0,1.22fr);
+      gap: 34px;
+      align-items: center;
+      background:
+        radial-gradient(circle at top right, rgba(184,129,40,.30), transparent 25rem),
+        linear-gradient(135deg,#003f35,#005a4e);
+      color: #fff;
+    }
+    .deal-screenshot-frame {
+      height: 650px;
+      border-radius: 34px;
+      background: #f7f4ea;
+      border: 8px solid rgba(219,207,167,.56);
+      box-shadow: 0 22px 52px rgba(0,0,0,.24);
+      overflow: hidden;
+      display: grid;
+      place-items: center;
+    }
+    .deal-screenshot-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+      background: #f7f4ea;
+    }
+    .deal-showcase-copy .eyebrow,
+    .deal-showcase-copy h3 { color: var(--pale-gold); }
+    .deal-showcase-copy h3 { font-size: clamp(30px,4vw,48px); margin-bottom: 14px; }
+    .deal-showcase-copy p { color: rgba(255,255,255,.90); font-size: 18px; }
+    .deal-showcase-dots {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      padding: 18px;
+      background: rgba(255,255,255,.96);
+    }
+    .deal-showcase-dots span {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--bronze);
+      opacity: .55;
+    }
+    @keyframes dealtrackrSlide {
+      0%,7% { transform: translateX(0); }
+      10%,17% { transform: translateX(-10%); }
+      20%,27% { transform: translateX(-20%); }
+      30%,37% { transform: translateX(-30%); }
+      40%,47% { transform: translateX(-40%); }
+      50%,57% { transform: translateX(-50%); }
+      60%,67% { transform: translateX(-60%); }
+      70%,77% { transform: translateX(-70%); }
+      80%,87% { transform: translateX(-80%); }
+      90%,97% { transform: translateX(-90%); }
+      100% { transform: translateX(0); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .deal-showcase-track { animation: none; }
+    }
+    @media (max-width: 960px) {
+      .deal-showcase-slide { grid-template-columns: 1fr; min-height: auto; }
+      .deal-screenshot-frame { height: 600px; }
+    }
+    @media (max-width: 560px) {
+      .deal-showcase-slide { padding: 18px; gap: 22px; }
+      .deal-screenshot-frame { height: 560px; border-width: 5px; border-radius: 26px; }
+      .deal-showcase-copy h3 { font-size: 30px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="top-strip"><span>DealTrackr for Agents</span><span>Now Live on the App Store</span><span>Built Specifically for Real Estate Professionals</span></div>
+
+  <header class="site-header">
+    <a class="logo-lockup" href="index.html"><img src="joshua-hh-logo-wide.png" alt="Joshua White Howard Hanna" /></a>
+    <button class="menu-toggle" aria-label="Open menu" onclick="document.body.classList.toggle('menu-open')">☰</button>
+    <nav class="main-nav refined-nav">
+      <a href="search.html">Search</a>
+      <a href="home-value.html">Home Value</a>
+      <a href="listings.html">Listings</a>
+      <a href="index.html#about">About</a>
+      <a href="technology.html">Technology</a>
+      <a href="hometrackr.html">HomeTrackr</a>
+      <a class="active-tab" href="dealtrackr.html">DealTrackr</a>
+      <a href="contact.html">Contact</a>
+      <a class="nav-cta" href="index.html#ai">Meet Kiki</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section tech-page-hero">
+      <p class="eyebrow">Built for REALTORS®</p>
+      <h1>Manage every transaction from contract to closing.</h1>
+      <p class="lead-copy">DealTrackr keeps your pipeline, transaction dates, reminders, contacts, notes, goals, and follow-ups together in one streamlined app—without complicated systems or clutter.</p>
+      <div class="cta-row" style="justify-content:center">
+        <a class="btn btn-gold btn-large" href="https://apps.apple.com/us/app/dealtrackr-for-agents/id6794187654" target="_blank" rel="noopener">Download on the App Store</a>
+        <a class="btn btn-light" href="technology.html">Explore Technology</a>
+      </div>
+    </section>
+
+    <section class="section deal-showcase-section">
+      <div class="section-heading centered">
+        <p class="eyebrow">App Preview</p>
+        <h2>See DealTrackr in action</h2>
+        <p>Explore the dashboard, pipeline, transactions, deadlines, goals, clients, settings, and calendar through real app screens with privacy-safe demonstration data.</p>
+      </div>
+      <div class="deal-showcase-window" aria-label="DealTrackr app screenshot slideshow">
+        <div class="deal-showcase-track">
+          <article class="deal-showcase-slide">
+            <div class="deal-screenshot-frame"><img src="01_Home_Dashboard.png" alt="DealTrackr production dashboard" /></div>
+            <div class="deal-showcase-copy"><p class="eyebrow">Dashboard</p><h3>Your business at a glance.</h3><p>See annual goal progress, closed and pending GCI, projected production, active clients, and transactions from one focused dashboard.</p></div>
+          </article>
+          <article class="deal-showcase-slide">
+            <div class="deal-screenshot-frame"><img src="02_Pipeline.png.png" alt="DealTrackr client pipeline" /></div>
+            <div class="deal-showcase-copy"><p class="eyebrow">Pipeline</p><h3>Keep every opportunity moving.</h3><p>Organize buyers, sellers, dual clients, future opportunities, and nurture contacts with clear stages and lead sources.</p></div>
+          </article>
+          <article class="deal-showcase-slide">
+            <div class="deal-screenshot-frame"><img src="03_Transactions.png.png" alt="DealTrackr active transactions" /></div>
+            <div class="deal-showcase-copy"><p class="eyebrow">Transactions</p><h3>Know what needs attention.</h3><p>Review active deals, closing timelines, transaction values, contract status, overdue items, and upcoming milestones.</p></div>
+          </article>
+          <article class="deal-showcase-slide">
+            <div class="deal-screenshot-frame"><img src="04_Transaction_Overview.png" alt="DealTrackr transaction overview" /></div>
+            <div class="deal-showcase-copy"><p class="eyebrow">Transaction Details</p><h3>Every key detail in one place.</h3><p>View the parties, price, financing, source, closing date, linked pipeline record, timeline, and financial summary for each deal.</p></div>
+          </article>
+          <article class="deal-showcase-slide">
+            <div class="deal-screenshot-frame"><img src="05_Transaction_Financials.png" alt="DealTrackr transaction financials and documents" /></div>
+            <div class="deal-showcase-copy"><p class="eyebrow">Financials & Documents</p><h3>Keep the numbers and paperwork together.</h3><p>Track commissions, fees, estimated earnings, documents, contacts, phone numbers, and transaction notes in one organized workspace.</p></div>
+          </article>
+          <article class="deal-showcase-slide">
+            <div class="deal-screenshot-frame"><img src="06_Calendar.png" alt="DealTrackr calendar agenda" /></div>
+            <div class="deal-showcase-copy"><p class="eyebrow">Calendar</p><h3>Plan your entire day.</h3><p>See consultations, showings, listing appointments, deadlines, follow-ups, internal tasks, and contract reviews in chronological order.</p></div>
+          </article>
+          <article class="deal-showcase-slide">
+            <div class="deal-screenshot-frame"><img src="07_Goals.png" alt="DealTrackr production goals" /></div>
+            <div class="deal-showcase-copy"><p class="eyebrow">Goals</p><h3>Measure progress with clarity.</h3><p>Track sales volume, GCI, total sides, award thresholds, units sold, pace, and remaining production targets.</p></div>
+          </article>
+          <article class="deal-showcase-slide">
+            <div class="deal-screenshot-frame"><img src="09_Clients.png" alt="DealTrackr client management" /></div>
+            <div class="deal-showcase-copy"><p class="eyebrow">Clients</p><h3>Your relationships stay organized.</h3><p>Search and filter active clients, past clients, buyers, sellers, and referral relationships from one clean database.</p></div>
+          </article>
+          <article class="deal-showcase-slide">
+            <div class="deal-screenshot-frame"><img src="10_Agent_Profile.png" alt="DealTrackr agent preferences" /></div>
+            <div class="deal-showcase-copy"><p class="eyebrow">Agent Settings</p><h3>Built around your business.</h3><p>Set financial defaults, annual goals, review links, reminders, calendar exports, brokerage branding, and data preferences.</p></div>
+          </article>
+          <article class="deal-showcase-slide">
+            <div class="deal-screenshot-frame"><img src="12_Calendar_Alternate.png" alt="DealTrackr deadline calendar" /></div>
+            <div class="deal-showcase-copy"><p class="eyebrow">Deadlines</p><h3>Never lose track of a critical date.</h3><p>Review overdue and upcoming earnest money, appraisal, mortgage, inspection, closing, and follow-up events in one place.</p></div>
+          </article>
+        </div>
+        <div class="deal-showcase-dots" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="product-showcase">
+        <div class="product-visual dark"><div><div class="app-mark deal">DT</div><h2>DealTrackr</h2><p>For Agents</p></div></div>
+        <div class="product-panel">
+          <p class="eyebrow">Your Business at a Glance</p>
+          <h2>A simpler way to stay on top of every deal.</h2>
+          <p>Whether you are managing one transaction or an entire pipeline, DealTrackr gives you a focused workspace for the information that matters most.</p>
+          <div class="tech-feature-list"><span>Buyer transactions</span><span>Seller transactions</span><span>Custom deadlines</span><span>Recurring follow-ups</span><span>Production goals</span><span>Client contacts</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading centered"><p class="eyebrow">Core Features</p><h2>Everything agents need to keep deals moving</h2></div>
+      <div class="feature-grid-tech">
+        <article><h3>Transaction Management</h3><p>Track buyer and seller transactions, key dates, notes, contacts, and progress in one place.</p></article>
+        <article><h3>Calendar & Deadlines</h3><p>Manage contract milestones, closing dates, custom deadlines, and recurring reminders.</p></article>
+        <article><h3>Pipeline</h3><p>See active opportunities and transaction stages so nothing disappears into scattered notes.</p></article>
+        <article><h3>Client & Vendor Contacts</h3><p>Store client, attorney, lender, inspector, contractor, and vendor information with the deal.</p></article>
+        <article><h3>Production Goals</h3><p>Track progress toward volume, units, and income goals with a clear production overview.</p></article>
+        <article><h3>Personalized Themes</h3><p>Choose preset themes or customize the app’s colors to better match your brand and workflow.</p></article>
+      </div>
+    </section>
+
+    <section class="section why-tech">
+      <p class="eyebrow">Why I Built DealTrackr</p>
+      <h2>Created from the daily reality of working in real estate.</h2>
+      <p>As an active REALTOR®, I wanted a straightforward way to manage dates, contacts, notes, follow-ups, and production without building my business around an oversized software platform.</p>
+      <p>DealTrackr was designed to feel useful immediately: simple enough for one agent, organized enough for a growing pipeline, and flexible enough to support the way each professional works.</p>
+      <strong>Built by an agent, for agents.</strong>
+    </section>
+
+    <section class="section download-strip tech-page-hero">
+      <p class="eyebrow">Launch Edition</p>
+      <h2>Take control of your transactions today.</h2>
+      <p>DealTrackr for Agents is available now for iPhone and iPad through the iOS App Store.</p>
+      <div class="cta-row" style="justify-content:center">
+        <a class="btn btn-gold btn-large" href="https://apps.apple.com/us/app/dealtrackr-for-agents/id6794187654" target="_blank" rel="noopener">Download DealTrackr</a>
+        <button class="btn btn-light" type="button" onclick="document.querySelector('.jw-ai-launcher')?.click()">Ask Kiki About DealTrackr</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer premium-footer">
+    <div class="footer-columns">
+      <div><img src="hh-logo-forest-gold.png" alt="Howard Hanna" /><p>DealTrackr was created by Joshua White, REALTOR® and real estate technology creator.</p></div>
+      <div><strong>Explore</strong><a href="technology.html">Technology</a><a href="hometrackr.html">HomeTrackr</a><a href="index.html#ai">Kiki AI</a><a href="index.html">Joshua White Real Estate</a></div>
+      <div><strong>Support</strong><p>Questions about DealTrackr?</p><a href="mailto:hometrackrsupport@gmail.com">Email App Support</a></div>
+    </div>
+    <div class="footer-bottom-row"><p>© 2026 Joshua White. DealTrackr for Agents.</p></div>
+  </footer>
+  <script src="joshua-ai.js"></script>
+  <script src="hometrackr-ai-addon.js"></script>
+</body>
+</html>
