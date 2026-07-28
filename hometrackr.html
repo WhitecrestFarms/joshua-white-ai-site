@@ -3,18 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>HomeTrackr App | Home Log for Homeowners, Renters & Landlords</title>
   <meta name="description" content="HomeTrackr Home Log helps homeowners, buyers, sellers, renters, and landlords organize maintenance, receipts, warranties, paint colors, projects, photos, vehicles, and important property records." />
-
   <meta property="og:title" content="HomeTrackr Home Log" />
   <meta property="og:description" content="A simple home organization app for maintenance, projects, receipts, warranties, photos, paint colors, vehicles, and more." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="joshua-headshot.png" />
-
+  <meta property="og:image" content="hometrackr-logo.png" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="custom.css" />
-
   <style>
     .active-tab { color: var(--gold) !important; }
     .app-page-main { padding-top: 14px; }
@@ -25,120 +21,22 @@
     .download-strip { text-align: center; background: radial-gradient(circle at top, rgba(184, 129, 40, .28), transparent 32rem), var(--forest); color: var(--white); }
     .download-strip h2, .download-strip .eyebrow { color: var(--pale-gold); }
     .app-support-note { margin-top: 22px; color: rgba(255,255,255,.82); font-size: 15px; }
-
-    .btn-disabled {
-      background: rgba(255,255,255,.14);
-      border-color: rgba(219, 207, 167, .50);
-      color: var(--pale-gold);
-      cursor: default;
-      box-shadow: none;
-    }
-
+    .btn-disabled { background: rgba(255,255,255,.14); border-color: rgba(219, 207, 167, .50); color: var(--pale-gold); cursor: default; box-shadow: none; }
     .btn-disabled:hover { transform: none; }
-
-    .platform-note {
-      margin-top: 18px;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      background: rgba(255,255,255,.10);
-      border: 1px solid rgba(219, 207, 167, .36);
-      border-radius: 999px;
-      padding: 10px 16px;
-      color: var(--pale-gold);
-      font-weight: 900;
-    }
-
-    .showcase-section {
-      overflow: hidden;
-      background:
-        radial-gradient(circle at top left, rgba(159, 200, 189, .28), transparent 28rem),
-        linear-gradient(135deg, rgba(255,255,255,.98), rgba(236, 233, 211, .62));
-    }
-
-    .showcase-window {
-      width: min(980px, 100%);
-      margin: 32px auto 0;
-      overflow: hidden;
-      border-radius: 30px;
-      border: 1px solid rgba(184, 161, 113, .36);
-      background: var(--forest);
-      box-shadow: 0 24px 64px rgba(14, 58, 50, .18);
-    }
-
-    .showcase-track {
-      display: flex;
-      width: 900%;
-      animation: hometrackrSlide 54s infinite;
-    }
-
-    .showcase-slide {
-      width: 11.1111%;
-      min-height: 700px;
-      padding: clamp(20px, 4vw, 42px);
-      display: grid;
-      grid-template-columns: minmax(250px, .78fr) minmax(0, 1.22fr);
-      gap: 32px;
-      align-items: center;
-      background:
-        radial-gradient(circle at top right, rgba(184,129,40,.30), transparent 24rem),
-        linear-gradient(135deg, #0e3a32, #005a4e);
-      color: var(--white);
-    }
-
-    .screenshot-frame {
-      min-height: 620px;
-      border-radius: 34px;
-      background: rgba(236, 233, 211, .94);
-      border: 8px solid rgba(219, 207, 167, .55);
-      box-shadow: 0 22px 52px rgba(0,0,0,.22);
-      overflow: hidden;
-      display: grid;
-      place-items: center;
-      position: relative;
-    }
-
-    .screenshot-frame img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      display: block;
-    }
-
-    .screenshot-fallback {
-      display: none !important;
-    }
-
-    .showcase-copy .eyebrow,
-    .showcase-copy h3 {
-      color: var(--pale-gold);
-    }
-
-    .showcase-copy h3 {
-      font-size: clamp(30px, 4vw, 48px);
-    }
-
-    .showcase-copy p {
-      color: rgba(255,255,255,.90);
-      font-size: 18px;
-    }
-
-    .showcase-dots {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      padding: 18px;
-      background: rgba(255,255,255,.95);
-    }
-
-    .showcase-dots span {
-      width: 10px;
-      height: 10px;
-      border-radius: 999px;
-      background: var(--bronze);
-      opacity: .55;
-    }
-
+    .platform-note { margin-top: 18px; display: inline-flex; align-items: center; gap: 10px; background: rgba(255,255,255,.10); border: 1px solid rgba(219, 207, 167, .36); border-radius: 999px; padding: 10px 16px; color: var(--pale-gold); font-weight: 900; }
+    .hometrackr-logo-image { width:min(220px,74%); height:auto; display:block; margin:0 auto 18px; border-radius:28px; box-shadow:0 18px 44px rgba(14,58,50,.24); }
+    .showcase-section { overflow: hidden; background: radial-gradient(circle at top left, rgba(159, 200, 189, .28), transparent 28rem), linear-gradient(135deg, rgba(255,255,255,.98), rgba(236, 233, 211, .62)); }
+    .showcase-window { width: min(980px, 100%); margin: 32px auto 0; overflow: hidden; border-radius: 30px; border: 1px solid rgba(184, 161, 113, .36); background: var(--forest); box-shadow: 0 24px 64px rgba(14, 58, 50, .18); }
+    .showcase-track { display: flex; width: 900%; animation: hometrackrSlide 54s infinite; }
+    .showcase-slide { width: 11.1111%; min-height: 700px; padding: clamp(20px, 4vw, 42px); display: grid; grid-template-columns: minmax(250px, .78fr) minmax(0, 1.22fr); gap: 32px; align-items: center; background: radial-gradient(circle at top right, rgba(184,129,40,.30), transparent 24rem), linear-gradient(135deg, #0e3a32, #005a4e); color: var(--white); }
+    .screenshot-frame { min-height: 620px; border-radius: 34px; background: rgba(236, 233, 211, .94); border: 8px solid rgba(219, 207, 167, .55); box-shadow: 0 22px 52px rgba(0,0,0,.22); overflow: hidden; display: grid; place-items: center; position: relative; }
+    .screenshot-frame img { width: 100%; height: 100%; object-fit: contain; display: block; }
+    .screenshot-fallback { display: none !important; }
+    .showcase-copy .eyebrow, .showcase-copy h3 { color: var(--pale-gold); }
+    .showcase-copy h3 { font-size: clamp(30px, 4vw, 48px); }
+    .showcase-copy p { color: rgba(255,255,255,.90); font-size: 18px; }
+    .showcase-dots { display: flex; justify-content: center; gap: 10px; padding: 18px; background: rgba(255,255,255,.95); }
+    .showcase-dots span { width: 10px; height: 10px; border-radius: 999px; background: var(--bronze); opacity: .55; }
     @keyframes hometrackrSlide {
       0%, 8% { transform: translateX(0); }
       11%, 19% { transform: translateX(-11.1111%); }
@@ -151,128 +49,47 @@
       88%, 96% { transform: translateX(-88.8888%); }
       100% { transform: translateX(0); }
     }
-
-    @media (max-width: 960px) {
-      .app-feature-grid { grid-template-columns: 1fr; }
-      .showcase-slide { grid-template-columns: 1fr; min-height: auto; }
-      .screenshot-frame { min-height: 560px; }
-    }
+    @media (max-width: 960px) { .app-feature-grid { grid-template-columns: 1fr; } .showcase-slide { grid-template-columns: 1fr; min-height: auto; } .screenshot-frame { min-height: 560px; } }
   </style>
 </head>
 <body>
   <div class="top-strip"><span>HomeTrackr Home Log</span><span>Now Live on the App Store</span><span>Android / Google Play Coming Soon</span></div>
-
   <header class="site-header">
     <a class="logo-lockup" href="index.html#home" aria-label="Joshua White Home"><img src="joshua-hh-logo-wide.png" alt="Joshua W. White Howard Hanna Real Estate Services logo" /></a>
     <button class="menu-toggle" aria-label="Open menu" onclick="document.body.classList.toggle('menu-open')">☰</button>
     <nav class="main-nav refined-nav">
-      <a href="index.html#search">Search</a>
-      <a href="index.html#value">Home Value</a>
-      <a href="index.html#listings">Listings</a>
-      <a href="index.html#about">About</a>
-      <a class="active-tab" href="hometrackr.html">HomeTrackr</a>
-      <a href="index.html#reviews">Reviews</a>
-      <a href="index.html#resources">Resources</a>
-      <a href="index.html#contact">Contact</a>
-      <a class="nav-cta" href="index.html#ai">Joshua AI</a>
+      <a href="index.html#search">Search</a><a href="index.html#value">Home Value</a><a href="index.html#listings">Listings</a><a href="index.html#about">About</a><a class="active-tab" href="hometrackr.html">HomeTrackr</a><a href="index.html#reviews">Reviews</a><a href="index.html#resources">Resources</a><a href="index.html#contact">Contact</a><a class="nav-cta" href="index.html#ai">Joshua AI</a>
     </nav>
   </header>
-
   <main class="app-page-main">
     <section class="section hometrackr-section app-page-hero">
       <div class="hometrackr-copy">
-        <p class="eyebrow">HomeTrackr Home Log</p>
-        <h1>Keep every home detail in one organized place.</h1>
-        <p class="lead-copy">HomeTrackr helps homeowners, buyers, sellers, renters, and landlords track maintenance, receipts, warranties, paint colors, projects, photos, vehicles, and important property records.</p>
+        <p class="eyebrow">HomeTrackr Home Log</p><h1>Keep every home detail in one organized place.</h1><p class="lead-copy">HomeTrackr helps homeowners, buyers, sellers, renters, and landlords track maintenance, receipts, warranties, paint colors, projects, photos, vehicles, and important property records.</p>
         <div class="hometrackr-points"><span>Maintenance Logs</span><span>Receipts & Warranties</span><span>Paint & Project Notes</span><span>Move-In Photo Records</span></div>
         <div class="cta-row"><a class="btn btn-gold btn-large" href="https://apps.apple.com/us/app/hometrackr-home-log/id6785076449" target="_blank" rel="noopener">Download on the App Store</a><a class="btn btn-light btn-light-bordered" href="https://whitecrestfarms.github.io/hometrackr-support/" target="_blank" rel="noopener">Support Page</a><span class="btn btn-disabled btn-large">Android / Google Play Coming Soon</span></div>
         <div class="platform-note">Android app is in the works and coming soon.</div>
       </div>
-      <div class="hometrackr-card"><div class="app-icon-mock">HT</div><strong>HomeTrackr</strong><span>Home Log</span><p>Built to help people stay organized long after closing day.</p></div>
+      <div class="hometrackr-card"><img class="hometrackr-logo-image" src="hometrackr-logo.png" alt="HomeTrackr app logo"><strong>HomeTrackr</strong><span>Home Log</span><p>Built to help people stay organized long after closing day.</p></div>
     </section>
-
     <section class="section showcase-section">
       <div class="section-heading centered"><p class="eyebrow">App Preview</p><h2>See HomeTrackr in action</h2><p>Take a quick look at how HomeTrackr helps organize property details, documents, reminders, projects, rooms, move-in records, vehicles, and service dates.</p></div>
-      <div class="showcase-window" aria-label="HomeTrackr app screenshot slideshow">
-        <div class="showcase-track">
-          <article class="showcase-slide">
-            <div class="screenshot-frame"><img src="hometrackr-slide-1.jpg" alt="HomeTrackr start your home record preview" onerror="this.style.display='none'" /><div class="screenshot-fallback"><span>Slide 1</span><strong>Start Your Home Record</strong><p>Upload as hometrackr-slide-1.jpg</p></div></div>
-            <div class="showcase-copy"><p class="eyebrow">Start Here</p><h3>Start your home record in minutes.</h3><p>Add your first property and begin tracking details, documents, reminders, insurance, taxes, utilities, and more.</p></div>
-          </article>
-          <article class="showcase-slide">
-            <div class="screenshot-frame"><img src="hometrackr-slide-2.jpg" alt="HomeTrackr home dashboard preview" onerror="this.style.display='none'" /><div class="screenshot-fallback"><span>Slide 2</span><strong>Home Dashboard</strong><p>Upload as hometrackr-slide-2.jpg</p></div></div>
-            <div class="showcase-copy"><p class="eyebrow">Dashboard</p><h3>See your home at a glance.</h3><p>Monitor home health, reminders, timeline progress, projects, warranties, and assistant insights from one dashboard.</p></div>
-          </article>
-          <article class="showcase-slide">
-            <div class="screenshot-frame"><img src="hometrackr-slide-3.jpg" alt="HomeTrackr everything in one place preview" onerror="this.style.display='none'" /><div class="screenshot-fallback"><span>Slide 3</span><strong>Everything in One Place</strong><p>Upload as hometrackr-slide-3.jpg</p></div></div>
-            <div class="showcase-copy"><p class="eyebrow">One Place</p><h3>Jump quickly between every key section.</h3><p>Search, reminders, documents, insurance, taxes, projects, home systems, and more stay organized inside your home profile.</p></div>
-          </article>
-          <article class="showcase-slide">
-            <div class="screenshot-frame"><img src="hometrackr-slide-4.jpg" alt="HomeTrackr document vault preview" onerror="this.style.display='none'" /><div class="screenshot-fallback"><span>Slide 4</span><strong>Document Vault</strong><p>Upload as hometrackr-slide-4.jpg</p></div></div>
-            <div class="showcase-copy"><p class="eyebrow">Documents</p><h3>Organize documents and records.</h3><p>Keep home files, section records, receipts, warranties, manuals, system details, and important paperwork easy to find.</p></div>
-          </article>
-          <article class="showcase-slide">
-            <div class="screenshot-frame"><img src="hometrackr-slide-5.jpg" alt="HomeTrackr projects and renovations preview" onerror="this.style.display='none'" /><div class="screenshot-fallback"><span>Slide 5</span><strong>Projects</strong><p>Upload as hometrackr-slide-5.jpg</p></div></div>
-            <div class="showcase-copy"><p class="eyebrow">Projects</p><h3>Plan projects and renovations.</h3><p>Track budgets, receipts, warranties, contractors, before-and-after progress, and improvement records for every project.</p></div>
-          </article>
-          <article class="showcase-slide">
-            <div class="screenshot-frame"><img src="hometrackr-slide-6.jpg" alt="HomeTrackr room details and paint preview" onerror="this.style.display='none'" /><div class="screenshot-fallback"><span>Slide 6</span><strong>Room Details</strong><p>Upload as hometrackr-slide-6.jpg</p></div></div>
-            <div class="showcase-copy"><p class="eyebrow">Rooms</p><h3>Save finishes and room details.</h3><p>Track paint colors, products, finishes, room information, receipts, and maintenance notes space by space.</p></div>
-          </article>
-          <article class="showcase-slide">
-            <div class="screenshot-frame"><img src="hometrackr-slide-7.jpg" alt="HomeTrackr move-in condition checklist preview" onerror="this.style.display='none'" /><div class="screenshot-fallback"><span>Slide 7</span><strong>Move-In Condition</strong><p>Upload as hometrackr-slide-7.jpg</p></div></div>
-            <div class="showcase-copy"><p class="eyebrow">Condition</p><h3>Document move-in condition.</h3><p>Capture every space before move-in with checklist guidance, date-stamped photo tracking, and condition records.</p></div>
-          </article>
-          <article class="showcase-slide">
-            <div class="screenshot-frame"><img src="hometrackr-slide-8.jpg" alt="HomeTrackr vehicle tracking preview" onerror="this.style.display='none'" /><div class="screenshot-fallback"><span>Slide 8</span><strong>Vehicle Tracking</strong><p>Upload as hometrackr-slide-8.jpg</p></div></div>
-            <div class="showcase-copy"><p class="eyebrow">Vehicles</p><h3>Track vehicles too.</h3><p>Store vehicle details, purchase information, lender details, service history, registration, insurance, and maintenance records.</p></div>
-          </article>
-          <article class="showcase-slide">
-            <div class="screenshot-frame"><img src="hometrackr-slide-9.jpg" alt="HomeTrackr service dates preview" onerror="this.style.display='none'" /><div class="screenshot-fallback"><span>Slide 9</span><strong>Service Dates</strong><p>Upload as hometrackr-slide-9.jpg</p></div></div>
-            <div class="showcase-copy"><p class="eyebrow">Reminders</p><h3>Stay ahead of service dates.</h3><p>Track registration, inspection, insurance, maintenance logs, service dates, and export records when needed.</p></div>
-          </article>
-        </div>
-        <div class="showcase-dots" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
-      </div>
+      <div class="showcase-window" aria-label="HomeTrackr app screenshot slideshow"><div class="showcase-track">
+        <article class="showcase-slide"><div class="screenshot-frame"><img src="hometrackr-slide-1.jpg" alt="HomeTrackr start your home record preview" onerror="this.style.display='none'" /><div class="screenshot-fallback"><span>Slide 1</span><strong>Start Your Home Record</strong><p>Upload as hometrackr-slide-1.jpg</p></div></div><div class="showcase-copy"><p class="eyebrow">Start Here</p><h3>Start your home record in minutes.</h3><p>Add your first property and begin tracking details, documents, reminders, insurance, taxes, utilities, and more.</p></div></article>
+        <article class="showcase-slide"><div class="screenshot-frame"><img src="hometrackr-slide-2.jpg" alt="HomeTrackr home dashboard preview" onerror="this.style.display='none'" /><div class="screenshot-fallback"><span>Slide 2</span><strong>Home Dashboard</strong><p>Upload as hometrackr-slide-2.jpg</p></div></div><div class="showcase-copy"><p class="eyebrow">Dashboard</p><h3>See your home at a glance.</h3><p>Monitor home health, reminders, timeline progress, projects, warranties, and assistant insights from one dashboard.</p></div></article>
+        <article class="showcase-slide"><div class="screenshot-frame"><img src="hometrackr-slide-3.jpg" alt="HomeTrackr everything in one place preview" onerror="this.style.display='none'" /><div class="screenshot-fallback"><span>Slide 3</span><strong>Everything in One Place</strong><p>Upload as hometrackr-slide-3.jpg</p></div></div><div class="showcase-copy"><p class="eyebrow">One Place</p><h3>Jump quickly between every key section.</h3><p>Search, reminders, documents, insurance, taxes, projects, home systems, and more stay organized inside your home profile.</p></div></article>
+        <article class="showcase-slide"><div class="screenshot-frame"><img src="hometrackr-slide-4.jpg" alt="HomeTrackr document vault preview" onerror="this.style.display='none'" /><div class="screenshot-fallback"><span>Slide 4</span><strong>Document Vault</strong><p>Upload as hometrackr-slide-4.jpg</p></div></div><div class="showcase-copy"><p class="eyebrow">Documents</p><h3>Organize documents and records.</h3><p>Keep home files, section records, receipts, warranties, manuals, system details, and important paperwork easy to find.</p></div></article>
+        <article class="showcase-slide"><div class="screenshot-frame"><img src="hometrackr-slide-5.jpg" alt="HomeTrackr projects and renovations preview" onerror="this.style.display='none'" /><div class="screenshot-fallback"><span>Slide 5</span><strong>Projects</strong><p>Upload as hometrackr-slide-5.jpg</p></div></div><div class="showcase-copy"><p class="eyebrow">Projects</p><h3>Plan projects and renovations.</h3><p>Track budgets, receipts, warranties, contractors, before-and-after progress, and improvement records for every project.</p></div></article>
+        <article class="showcase-slide"><div class="screenshot-frame"><img src="hometrackr-slide-6.jpg" alt="HomeTrackr room details and paint preview" onerror="this.style.display='none'" /><div class="screenshot-fallback"><span>Slide 6</span><strong>Room Details</strong><p>Upload as hometrackr-slide-6.jpg</p></div></div><div class="showcase-copy"><p class="eyebrow">Rooms</p><h3>Save finishes and room details.</h3><p>Track paint colors, products, finishes, room information, receipts, and maintenance notes space by space.</p></div></article>
+        <article class="showcase-slide"><div class="screenshot-frame"><img src="hometrackr-slide-7.jpg" alt="HomeTrackr move-in condition checklist preview" onerror="this.style.display='none'" /><div class="screenshot-fallback"><span>Slide 7</span><strong>Move-In Condition</strong><p>Upload as hometrackr-slide-7.jpg</p></div></div><div class="showcase-copy"><p class="eyebrow">Condition</p><h3>Document move-in condition.</h3><p>Capture every space before move-in with checklist guidance, date-stamped photo tracking, and condition records.</p></div></article>
+        <article class="showcase-slide"><div class="screenshot-frame"><img src="hometrackr-slide-8.jpg" alt="HomeTrackr vehicle tracking preview" onerror="this.style.display='none'" /><div class="screenshot-fallback"><span>Slide 8</span><strong>Vehicle Tracking</strong><p>Upload as hometrackr-slide-8.jpg</p></div></div><div class="showcase-copy"><p class="eyebrow">Vehicles</p><h3>Track vehicles too.</h3><p>Store vehicle details, purchase information, lender details, service history, registration, insurance, and maintenance records.</p></div></article>
+        <article class="showcase-slide"><div class="screenshot-frame"><img src="hometrackr-slide-9.jpg" alt="HomeTrackr service dates preview" onerror="this.style.display='none'" /><div class="screenshot-fallback"><span>Slide 9</span><strong>Service Dates</strong><p>Upload as hometrackr-slide-9.jpg</p></div></div><div class="showcase-copy"><p class="eyebrow">Reminders</p><h3>Stay ahead of service dates.</h3><p>Track registration, inspection, insurance, maintenance logs, service dates, and export records when needed.</p></div></article>
+      </div><div class="showcase-dots" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div></div>
     </section>
-
-    <section class="section">
-      <div class="section-heading centered"><p class="eyebrow">What It Tracks</p><h2>A smarter home log for real life</h2><p>HomeTrackr is designed for the home information people usually forget, misplace, or wish they had saved when repairs, resale, insurance, or maintenance questions come up later.</p></div>
-      <div class="resource-grid app-feature-grid">
-        <a href="#"><strong>Home Maintenance</strong><span>Track HVAC, roof, siding, utilities, detectors, appliances, pool/spa items, and recurring reminders.</span></a>
-        <a href="#"><strong>Projects & Renovations</strong><span>Save project details, contractor notes, budgets, receipts, warranties, and before/after records.</span></a>
-        <a href="#"><strong>Paint & Room Notes</strong><span>Record wall, trim, and ceiling paint colors so touch-ups and future projects are easier.</span></a>
-        <a href="#"><strong>Photos & Condition Records</strong><span>Keep move-in, move-out, before, after, and property condition photos organized by home.</span></a>
-        <a href="#"><strong>Documents & Receipts</strong><span>Store receipts, manuals, warranties, permits, contracts, and important home paperwork.</span></a>
-        <a href="#"><strong>Vehicles & Other Records</strong><span>Track vehicle details, registration, insurance, title notes, bill of sale, and service history.</span></a>
-      </div>
-    </section>
-
-    <section class="section ai-feature">
-      <div class="section-copy"><p class="eyebrow">Why It Helps</p><h2>Better records before, during, and after ownership</h2><p>The app is useful long after someone buys a home, but it can also help renters document condition, landlords stay organized, and sellers prepare cleaner records before listing.</p></div>
-      <div class="ai-panel"><h3>Great for:</h3><ul><li>Homeowners tracking maintenance and improvements</li><li>Buyers keeping inspection and move-in details organized</li><li>Sellers preparing documentation before listing</li><li>Renters documenting move-in and move-out condition</li><li>Landlords keeping property records easier to reference</li></ul></div>
-    </section>
-
-    <section class="section download-strip">
-      <p class="eyebrow">Ready to try it?</p>
-      <h2>Download HomeTrackr Home Log</h2>
-      <p>Available now on the Apple App Store. Android / Google Play app is in the works and coming soon.</p>
-      <div class="cta-row centered-row"><a class="btn btn-gold btn-large" href="https://apps.apple.com/us/app/hometrackr-home-log/id6785076449" target="_blank" rel="noopener">Download on the App Store</a><span class="btn btn-disabled btn-large">Google Play Coming Soon</span><a class="btn btn-light btn-large" href="index.html#contact">Contact Joshua</a></div>
-      <p class="app-support-note">Need help or have a support question? Visit the HomeTrackr support page from the button above.</p>
-    </section>
+    <section class="section"><div class="section-heading centered"><p class="eyebrow">What It Tracks</p><h2>A smarter home log for real life</h2><p>HomeTrackr is designed for the home information people usually forget, misplace, or wish they had saved when repairs, resale, insurance, or maintenance questions come up later.</p></div><div class="resource-grid app-feature-grid"><a href="#"><strong>Home Maintenance</strong><span>Track HVAC, roof, siding, utilities, detectors, appliances, pool/spa items, and recurring reminders.</span></a><a href="#"><strong>Projects & Renovations</strong><span>Save project details, contractor notes, budgets, receipts, warranties, and before/after records.</span></a><a href="#"><strong>Paint & Room Notes</strong><span>Record wall, trim, and ceiling paint colors so touch-ups and future projects are easier.</span></a><a href="#"><strong>Photos & Condition Records</strong><span>Keep move-in, move-out, before, after, and property condition photos organized by home.</span></a><a href="#"><strong>Documents & Receipts</strong><span>Store receipts, manuals, warranties, permits, contracts, and important home paperwork.</span></a><a href="#"><strong>Vehicles & Other Records</strong><span>Track vehicle details, registration, insurance, title notes, bill of sale, and service history.</span></a></div></section>
+    <section class="section ai-feature"><div class="section-copy"><p class="eyebrow">Why It Helps</p><h2>Better records before, during, and after ownership</h2><p>The app is useful long after someone buys a home, but it can also help renters document condition, landlords stay organized, and sellers prepare cleaner records before listing.</p></div><div class="ai-panel"><h3>Great for:</h3><ul><li>Homeowners tracking maintenance and improvements</li><li>Buyers keeping inspection and move-in details organized</li><li>Sellers preparing documentation before listing</li><li>Renters documenting move-in and move-out condition</li><li>Landlords keeping property records easier to reference</li></ul></div></section>
+    <section class="section download-strip"><p class="eyebrow">Ready to try it?</p><h2>Download HomeTrackr Home Log</h2><p>Available now on the Apple App Store. Android / Google Play app is in the works and coming soon.</p><div class="cta-row centered-row"><a class="btn btn-gold btn-large" href="https://apps.apple.com/us/app/hometrackr-home-log/id6785076449" target="_blank" rel="noopener">Download on the App Store</a><span class="btn btn-disabled btn-large">Google Play Coming Soon</span><a class="btn btn-light btn-large" href="index.html#contact">Contact Joshua</a></div><p class="app-support-note">Need help or have a support question? Visit the HomeTrackr support page from the button above.</p></section>
   </main>
-
-  <footer class="footer premium-footer">
-    <div class="footer-columns">
-      <div><img src="hh-logo-forest-gold.png" alt="Howard Hanna Real Estate Services" /><p>Joshua White, Howard Hanna Real Estate Services. Serving buyers and sellers throughout Southern Tier NY and Northern Tier PA.</p></div>
-      <div><strong>Quick Links</strong><a href="index.html#search">Search Homes</a><a href="index.html#value">Home Value</a><a href="hometrackr.html">HomeTrackr</a><a href="index.html#reviews">Reviews</a><a href="index.html#contact">Contact</a></div>
-      <div><strong>Office</strong><p>45 E Market Street<br />Corning, NY 14830</p><p>Office: (607) 936-HOME<br />Cell: (607) 207-6969</p></div>
-    </div>
-    <div class="footer-bottom-row"><p>© 2026 Joshua White | Licensed in New York and Pennsylvania.</p><div class="footer-eho"><svg viewBox="0 0 120 100" role="img" aria-label="Equal Housing Opportunity logo"><path d="M10 48 L60 10 L110 48" fill="none" stroke="currentColor" stroke-width="12" stroke-linecap="square" stroke-linejoin="miter" /><path d="M22 47 V88 H98 V47" fill="none" stroke="currentColor" stroke-width="10" /><rect x="40" y="51" width="40" height="10" fill="currentColor" /><rect x="40" y="68" width="40" height="10" fill="currentColor" /></svg><span>We do business in accordance with the Federal Housing Law.</span></div></div>
-    <p class="fine-print">Real estate information is for general informational purposes only. For legal, tax, lending, or financial advice, consult the appropriate licensed professional.</p>
-  </footer>
-
-  <script src="joshua-ai.js"></script>
-  <script src="hometrackr-ai-addon.js"></script>
+  <footer class="footer premium-footer"><div class="footer-columns"><div><img src="hh-logo-forest-gold.png" alt="Howard Hanna Real Estate Services" /><p>Joshua White, Howard Hanna Real Estate Services. Serving buyers and sellers throughout Southern Tier NY and Northern Tier PA.</p></div><div><strong>Quick Links</strong><a href="index.html#search">Search Homes</a><a href="index.html#value">Home Value</a><a href="hometrackr.html">HomeTrackr</a><a href="index.html#reviews">Reviews</a><a href="index.html#contact">Contact</a></div><div><strong>Office</strong><p>45 E Market Street<br />Corning, NY 14830</p><p>Office: (607) 936-HOME<br />Cell: (607) 207-6969</p></div></div><div class="footer-bottom-row"><p>© 2026 Joshua White | Licensed in New York and Pennsylvania.</p><div class="footer-eho"><svg viewBox="0 0 120 100" role="img" aria-label="Equal Housing Opportunity logo"><path d="M10 48 L60 10 L110 48" fill="none" stroke="currentColor" stroke-width="12" stroke-linecap="square" stroke-linejoin="miter" /><path d="M22 47 V88 H98 V47" fill="none" stroke="currentColor" stroke-width="10" /><rect x="40" y="51" width="40" height="10" fill="currentColor" /><rect x="40" y="68" width="40" height="10" fill="currentColor" /></svg><span>We do business in accordance with the Federal Housing Law.</span></div></div><p class="fine-print">Real estate information is for general informational purposes only. For legal, tax, lending, or financial advice, consult the appropriate licensed professional.</p></footer>
+  <script src="joshua-ai.js"></script><script src="hometrackr-ai-addon.js"></script>
 </body>
 </html>
