@@ -13,8 +13,8 @@
     .active-tab { color: var(--gold) !important; }
     .deal-showcase-section { overflow: hidden; background: radial-gradient(circle at top left, rgba(184,129,40,.20), transparent 30rem), linear-gradient(135deg, rgba(255,255,255,.99), rgba(236,233,211,.66)); }
     .deal-showcase-window { width: min(1020px, 100%); margin: 34px auto 0; overflow: hidden; border-radius: 30px; border: 1px solid rgba(184,161,113,.40); background: #003f35; box-shadow: 0 24px 64px rgba(14,58,50,.20); }
-    .deal-showcase-track { display: flex; width: 1000%; animation: dealtrackrSlide 70s infinite; }
-    .deal-showcase-slide { width: 10%; min-height: 720px; padding: clamp(20px,4vw,44px); display: grid; grid-template-columns: minmax(260px,.78fr) minmax(0,1.22fr); gap: 34px; align-items: center; background: radial-gradient(circle at top right, rgba(184,129,40,.30), transparent 25rem), linear-gradient(135deg,#003f35,#005a4e); color: #fff; }
+    .deal-showcase-track { display: flex; width: 1100%; animation: dealtrackrSlide 77s infinite; }
+    .deal-showcase-slide { width: 9.0909%; min-height: 720px; padding: clamp(20px,4vw,44px); display: grid; grid-template-columns: minmax(260px,.78fr) minmax(0,1.22fr); gap: 34px; align-items: center; background: radial-gradient(circle at top right, rgba(184,129,40,.30), transparent 25rem), linear-gradient(135deg,#003f35,#005a4e); color: #fff; }
     .deal-screenshot-frame { height: 650px; border-radius: 34px; background: #f7f4ea; border: 8px solid rgba(219,207,167,.56); box-shadow: 0 22px 52px rgba(0,0,0,.24); overflow: hidden; display: grid; place-items: center; }
     .deal-screenshot-frame img { width: 100%; height: 100%; object-fit: contain; display: block; background: #f7f4ea; }
     .deal-showcase-copy .eyebrow, .deal-showcase-copy h3 { color: var(--pale-gold); }
@@ -43,7 +43,20 @@
     .allowed-values details { background:rgba(255,255,255,.10); border-radius:16px; padding:16px 18px; }
     .allowed-values summary { cursor:pointer; font-weight:800; color:var(--pale-gold); }
     .allowed-values p { color:rgba(255,255,255,.9); line-height:1.7; }
-    @keyframes dealtrackrSlide { 0%,7% { transform: translateX(0); } 10%,17% { transform: translateX(-10%); } 20%,27% { transform: translateX(-20%); } 30%,37% { transform: translateX(-30%); } 40%,47% { transform: translateX(-40%); } 50%,57% { transform: translateX(-50%); } 60%,67% { transform: translateX(-60%); } 70%,77% { transform: translateX(-70%); } 80%,87% { transform: translateX(-80%); } 90%,97% { transform: translateX(-90%); } 100% { transform: translateX(0); } }
+    @keyframes dealtrackrSlide {
+      0%,6% { transform: translateX(0); }
+      9%,15% { transform: translateX(-9.0909%); }
+      18%,24% { transform: translateX(-18.1818%); }
+      27%,33% { transform: translateX(-27.2727%); }
+      36%,42% { transform: translateX(-36.3636%); }
+      45%,51% { transform: translateX(-45.4545%); }
+      54%,60% { transform: translateX(-54.5454%); }
+      63%,69% { transform: translateX(-63.6363%); }
+      72%,78% { transform: translateX(-72.7272%); }
+      81%,87% { transform: translateX(-81.8181%); }
+      90%,96% { transform: translateX(-90.909%); }
+      100% { transform: translateX(0); }
+    }
     @media (prefers-reduced-motion: reduce) { .deal-showcase-track { animation: none; } }
     @media (max-width: 960px) { .deal-showcase-slide { grid-template-columns: 1fr; min-height: auto; } .deal-screenshot-frame { height: 600px; } .template-grid,.import-steps,.format-grid { grid-template-columns:1fr; } }
     @media (max-width: 560px) { .deal-showcase-slide { padding: 18px; gap: 22px; } .deal-screenshot-frame { height: 560px; border-width: 5px; border-radius: 26px; } .deal-showcase-copy h3 { font-size: 30px; } }
@@ -58,7 +71,7 @@
   </header>
   <main>
     <section class="section tech-page-hero"><p class="eyebrow">Built for REALTORS®</p><h1>Manage every transaction from contract to closing.</h1><p class="lead-copy">DealTrackr keeps your pipeline, transaction dates, reminders, contacts, notes, goals, and follow-ups together in one streamlined app—without complicated systems or clutter.</p><div class="cta-row" style="justify-content:center"><a class="btn btn-gold btn-large" href="https://apps.apple.com/us/app/dealtrackr-for-agents/id6794187654" target="_blank" rel="noopener">Download on the App Store</a><a class="btn btn-light" href="technology.html">Explore Technology</a></div></section>
-    <section class="section deal-showcase-section"><div class="section-heading centered"><p class="eyebrow">App Preview</p><h2>See DealTrackr in action</h2><p>Explore the dashboard, pipeline, transactions, deadlines, goals, clients, settings, and calendar through real app screens with privacy-safe demonstration data.</p></div><div class="deal-showcase-window" aria-label="DealTrackr app screenshot slideshow"><div class="deal-showcase-track">
+    <section class="section deal-showcase-section"><div class="section-heading centered"><p class="eyebrow">App Preview</p><h2>See DealTrackr in action</h2><p>Explore the dashboard, pipeline, transactions, deadlines, goals, clients, business contacts, settings, and calendar through real app screens with privacy-safe demonstration data.</p></div><div class="deal-showcase-window" aria-label="DealTrackr app screenshot slideshow"><div class="deal-showcase-track">
       <article class="deal-showcase-slide"><div class="deal-screenshot-frame"><img src="01_Home_Dashboard.png" alt="DealTrackr production dashboard" /></div><div class="deal-showcase-copy"><p class="eyebrow">Dashboard</p><h3>Your business at a glance.</h3><p>See annual goal progress, closed and pending GCI, projected production, active clients, and transactions from one focused dashboard.</p></div></article>
       <article class="deal-showcase-slide"><div class="deal-screenshot-frame"><img src="02_Pipeline.png" alt="DealTrackr client pipeline" /></div><div class="deal-showcase-copy"><p class="eyebrow">Pipeline</p><h3>Keep every opportunity moving.</h3><p>Organize buyers, sellers, dual clients, future opportunities, and nurture contacts with clear stages and lead sources.</p></div></article>
       <article class="deal-showcase-slide"><div class="deal-screenshot-frame"><img src="03_Transactions.png" alt="DealTrackr active transactions" /></div><div class="deal-showcase-copy"><p class="eyebrow">Transactions</p><h3>Know what needs attention.</h3><p>Review active deals, closing timelines, transaction values, contract status, overdue items, and upcoming milestones.</p></div></article>
@@ -67,9 +80,10 @@
       <article class="deal-showcase-slide"><div class="deal-screenshot-frame"><img src="06_Calendar.png" alt="DealTrackr calendar agenda" /></div><div class="deal-showcase-copy"><p class="eyebrow">Calendar</p><h3>Plan your entire day.</h3><p>See consultations, showings, listing appointments, deadlines, follow-ups, internal tasks, and contract reviews in chronological order.</p></div></article>
       <article class="deal-showcase-slide"><div class="deal-screenshot-frame"><img src="07_Goals.png" alt="DealTrackr production goals" /></div><div class="deal-showcase-copy"><p class="eyebrow">Goals</p><h3>Measure progress with clarity.</h3><p>Track sales volume, GCI, total sides, award thresholds, units sold, pace, and remaining production targets.</p></div></article>
       <article class="deal-showcase-slide"><div class="deal-screenshot-frame"><img src="09_Clients.png" alt="DealTrackr client management" /></div><div class="deal-showcase-copy"><p class="eyebrow">Clients</p><h3>Your relationships stay organized.</h3><p>Search and filter active clients, past clients, buyers, sellers, and referral relationships from one clean database.</p></div></article>
+      <article class="deal-showcase-slide"><div class="deal-screenshot-frame"><img src="08_Business_Directory.png" alt="DealTrackr business directory" /></div><div class="deal-showcase-copy"><p class="eyebrow">Business Directory</p><h3>Your professional network, ready when you need it.</h3><p>Organize lenders, attorneys, paralegals, inspectors, title contacts, contractors, photographers, and other trusted business partners.</p></div></article>
       <article class="deal-showcase-slide"><div class="deal-screenshot-frame"><img src="10_Agent_Profile.png" alt="DealTrackr agent preferences" /></div><div class="deal-showcase-copy"><p class="eyebrow">Agent Settings</p><h3>Built around your business.</h3><p>Set financial defaults, annual goals, review links, reminders, calendar exports, brokerage branding, and data preferences.</p></div></article>
       <article class="deal-showcase-slide"><div class="deal-screenshot-frame"><img src="12_Calendar_Alternate.png" alt="DealTrackr deadline calendar" /></div><div class="deal-showcase-copy"><p class="eyebrow">Deadlines</p><h3>Never lose track of a critical date.</h3><p>Review overdue and upcoming earnest money, appraisal, mortgage, inspection, closing, and follow-up events in one place.</p></div></article>
-    </div><div class="deal-showcase-dots" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div></div></section>
+    </div><div class="deal-showcase-dots" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div></div></section>
     <section class="section"><div class="product-showcase"><div class="product-visual dark"><div><img class="deal-product-logo" src="dealtrackr-logo.png" alt="DealTrackr app logo"><h2>DealTrackr</h2><p>For Agents</p></div></div><div class="product-panel"><p class="eyebrow">Your Business at a Glance</p><h2>A simpler way to stay on top of every deal.</h2><p>Whether you are managing one transaction or an entire pipeline, DealTrackr gives you a focused workspace for the information that matters most.</p><div class="tech-feature-list"><span>Buyer transactions</span><span>Seller transactions</span><span>Custom deadlines</span><span>Recurring follow-ups</span><span>Production goals</span><span>Client contacts</span></div></div></div></section>
     <section class="section import-section" id="csv-templates"><div class="section-heading centered"><p class="eyebrow">CSV Import Templates</p><h2>Move your existing data into DealTrackr faster</h2><p>Download the correct template, enter your information without changing the column headings, save it as a CSV file, and import it inside DealTrackr.</p></div>
       <div class="template-grid">
