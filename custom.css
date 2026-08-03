@@ -62,6 +62,11 @@
   border-color: rgba(14, 58, 50, .18);
 }
 
+.product-visual.dark h2,
+.why-tech h2 {
+  color: var(--pale-gold);
+}
+
 .hometrackr-section {
   display: grid;
   grid-template-columns: 1.3fr .7fr;
